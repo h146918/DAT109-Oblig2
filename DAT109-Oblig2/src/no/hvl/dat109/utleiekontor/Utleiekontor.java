@@ -44,6 +44,21 @@ public class Utleiekontor {
 
 	}
 
+	public void leggTilBil(Bil bil) {
+
+		/**
+		 * 
+		 * Metode som legger til en bil i utleieBiler
+		 * 
+		 * 
+		 * @return Metode som legger til en bil i listen til utleiekontoret
+		 * 
+		 */
+
+		utleieBiler.add(bil);
+
+	}
+
 	public Utleiekontor(String utleiekontorNavn, int tlfnr, String adresse) {
 		this.utleiekontorNavn = utleiekontorNavn;
 		this.tlfnr = tlfnr;

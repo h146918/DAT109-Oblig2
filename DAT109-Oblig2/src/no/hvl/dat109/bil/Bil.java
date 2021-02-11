@@ -36,6 +36,12 @@ public class Bil {
 
 	}
 
+	@Override
+	public String toString() {
+		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge + ", gruppe="
+				+ gruppe + ", erLedig=" + erLedig + "]";
+	}
+
 	public String getRegnr() {
 		return regnr;
 	}
