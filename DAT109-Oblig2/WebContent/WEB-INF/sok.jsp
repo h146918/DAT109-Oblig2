@@ -8,26 +8,35 @@
 </head>
 <body>
 
-<form id="form" action="" method="post" >
+<form id="form" action="SokServlet" method="post" >
 	<fieldset>
-	
-		<select name="avdeling">
+	<p>
+	Utleieavdeling
+		<select name="utleieavdeling"> 
 			<option value="Bergen" selected="selected">Bergen</option>
 			<option value="Oslo">Oslo</option>
 			<option value="Stavanger">Stavanger</option>
 			<option value="Trondheim">Trondheim</option>
 		</select>
+		</p>
 		
+		<p>
+		Returavdeling
+		<select name="returavdeling"> 
+			<option value="Bergen" selected="selected">Bergen</option>
+			<option value="Oslo">Oslo</option>
+			<option value="Stavanger">Stavanger</option>
+			<option value="Trondheim">Trondheim</option>
+		</select>
+		</p>
 		
 	
-	<p><input type="date" name="someDate">A date</p>
+	<p>Fra: <input id="fraDato" type="date" name="fraDato"></p>
+	<p>Til: <input id="tilDato" type="date" name="tilDato"></p>
 	
 	
-			<div class="pure-control-group">
-				<label for="fornavn">:</label> 
-				<input id="fornavn" type="text"
-					name="fornavn" value="${fornavn}"  required/> 
-					<font color="red" >${feilFornavn}</font>
+			<div>
+				<button id="btn" type="submit">Send inn</button>
 			</div>
 	
 		</fieldset>
