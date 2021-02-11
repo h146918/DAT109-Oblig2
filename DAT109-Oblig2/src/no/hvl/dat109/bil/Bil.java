@@ -15,9 +15,9 @@ public class Bil {
 	private String modell;
 	private String farge;
 	private String gruppe; // utleiegruppe
-	
+
 	private boolean erLedig;
-	//private Date utleiePeriode; 
+	// private Date utleiePeriode;
 
 	public boolean isErLedig() {
 		return erLedig;
@@ -74,14 +74,6 @@ public class Bil {
 
 	public void setGruppe(String gruppe) {
 		this.gruppe = gruppe;
-	}
-
-	public int getKm() {
-		return km;
-	}
-
-	public void setKm(int km) {
-		this.km = km;
 	}
 
 }
