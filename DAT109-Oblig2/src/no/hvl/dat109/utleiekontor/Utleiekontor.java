@@ -1,4 +1,9 @@
-package no.hvl.dat109.Utleiekontor;
+package no.hvl.dat109.utleiekontor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import no.hvl.dat109.bil.Bil;
 
 /**
  * 

@@ -28,7 +28,7 @@
 			</div>
 			<div>
 				<label for="telefon">Telefon:</label> <input id="telfon" type="text"
-					name="passord" value="${telefon}" required /> 
+					name="telefon" value="${telefon}" required /> 
 					<font color="red">${feilTelefon}</font>
 			</div>
 		

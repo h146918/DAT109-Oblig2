@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import no.hvl.dat109.person.Person;
+
 
 @WebServlet("/ReserverServlet")
 public class ReserverServlet extends HttpServlet {
@@ -32,9 +34,11 @@ public class ReserverServlet extends HttpServlet {
 		String adresse = request.getParameter("adresse");
 		String telefonString = request.getParameter("telefon");
 		
-		Integer telefon = Integer.parseInt(telefonString);
+		int telefon = Integer.parseInt(telefonString);
 		
-		//test
+		Person p = new Person(fornavn,etternavn,adresse,telefon);
+		
+		System.out.println(p.toString());
 		
 		
 		

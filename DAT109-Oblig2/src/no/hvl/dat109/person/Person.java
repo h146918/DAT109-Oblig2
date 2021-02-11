@@ -1,4 +1,4 @@
-package no.hvl.dat109.Person;
+package no.hvl.dat109.person;
 
 /**
  * 
@@ -52,7 +52,6 @@ public class Person {
 	}
 
 	public Person(String fornavn, String etternavn, String adresse, int telefon) {
-		super();
 		Fornavn = fornavn;
 		Etternavn = etternavn;
 		Adresse = adresse;

@@ -1,4 +1,4 @@
-package no.hvl.dat109.Bil;
+package no.hvl.dat109.bil;
 
 /**
  * 
