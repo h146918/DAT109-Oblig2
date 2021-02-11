@@ -65,12 +65,6 @@ public class Bil {
 		this.gruppe = gruppe;
 	}
 
-	public int getKm() {
-		return km;
-	}
 
-	public void setKm(int km) {
-		this.km = km;
-	}
 
 }

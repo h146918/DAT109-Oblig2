@@ -21,6 +21,7 @@ public class ReserverServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		request.getRequestDispatcher("WEB-INF/reserver.jsp").forward(request, response);
+		//request.getRequestDispatcher("WEB-INF/sok.jsp").forward(request, response);
 		
 	}
 
