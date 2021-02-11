@@ -36,6 +36,20 @@ public class Bil {
 
 	}
 
+	/**
+	 * Tar inn en bil og returner Returnerer stringverdier for web
+	 * 
+	 * 
+	 * 
+	 * @return
+	 */
+
+	public String utskriftLedigBilWeb() {
+
+		return merke + " " + modell + " - " + farge + " - Gruppe: " + gruppe;
+
+	}
+
 	@Override
 	public String toString() {
 		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge + ", gruppe="
@@ -81,6 +95,5 @@ public class Bil {
 	public void setGruppe(String gruppe) {
 		this.gruppe = gruppe;
 	}
-
 
 }
