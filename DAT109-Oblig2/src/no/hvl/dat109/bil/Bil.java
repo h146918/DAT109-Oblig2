@@ -44,9 +44,9 @@ public class Bil {
 	 * @return
 	 */
 
-	public String utskriftLedigBilWeb(Bil bil) {
+	public String utskriftLedigBilWeb() {
 
-		return "Fredrik fikser";
+		return merke + " " + modell + " - " + farge + " - Gruppe: " + gruppe;
 
 	}
 
