@@ -16,6 +16,17 @@ public class Bil {
 	private String farge;
 	private String gruppe; // utleiegruppe
 
+	private boolean erLedig;
+	// private Date utleiePeriode;
+
+	public boolean isErLedig() {
+		return erLedig;
+	}
+
+	public void setErLedig(boolean erLedig) {
+		this.erLedig = erLedig;
+	}
+
 	public Bil(String regnr, String merke, String modell, String farge, String gruppe) {
 		this.regnr = regnr;
 		this.merke = merke;
@@ -64,7 +75,6 @@ public class Bil {
 	public void setGruppe(String gruppe) {
 		this.gruppe = gruppe;
 	}
-
 
 
 }
