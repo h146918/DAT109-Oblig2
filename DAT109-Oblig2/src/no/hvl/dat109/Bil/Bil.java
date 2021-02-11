@@ -1,5 +1,13 @@
 package no.hvl.dat109.Bil;
 
+/**
+ * 
+ * @author Gruppe 44
+ * 
+ * 
+ *
+ */
+
 public class Bil {
 	
 	private String regnr;
