@@ -6,14 +6,16 @@ public class Bil {
 	private String merke;
 	private String modell;
 	private String farge;
-	private String gruppe;
+	private String gruppe;		//utleiegruppe
+	private int km;				//kilometerstand
 	
-	public Bil(String regnr, String merke, String modell, String farge, String gruppe) {
+	public Bil(String regnr, String merke, String modell, String farge, String gruppe, int km) {
 		this.regnr = regnr;
 		this.merke = merke;
 		this.modell = modell;
 		this.farge = farge;
 		this.gruppe = gruppe;
+		this.km = km;
 	}
 
 
@@ -55,6 +57,14 @@ public class Bil {
 
 	public void setGruppe(String gruppe) {
 		this.gruppe = gruppe;
+	}
+	
+	public int getKm() {
+		return km;
+	}
+	
+	public void setKm(int km) {
+		this.km = km;
 	}
 	
 	
