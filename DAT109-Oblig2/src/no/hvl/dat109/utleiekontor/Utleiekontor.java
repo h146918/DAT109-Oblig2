@@ -2,6 +2,7 @@ package no.hvl.dat109.utleiekontor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import no.hvl.dat109.bil.Bil;
 
@@ -11,7 +12,7 @@ import no.hvl.dat109.bil.Bil;
  * 
  *         Denne klassen hånderer utleiekontorene
  * 
- *         v.02A
+ *         v.03A
  * 
  * 
  * 
@@ -21,9 +22,27 @@ import no.hvl.dat109.bil.Bil;
 public class Utleiekontor {
 
 	private String utleiekontorNavn;
-	private List<Bil> utleieBiler = new ArrayList<Bil>();
+	private List<Bil> utleieBiler;
 	private int tlfnr;
 	private String adresse;
+
+	public List<Bil> listeOverLedigeBiler() {
+
+		/**
+		 * Metode som returner en liste med Biler som er ledig i utleieBiler
+		 * 
+		 * 
+		 * @return Metode som returnerer en liste med biler som er ledige fra
+		 *         utleiekontoret
+		 * 
+		 * 
+		 * 
+		 */
+
+		List<Bil> returListe = utleieBiler.stream().filter(bil -> bil.isErLedig()).collect(Collectors.toList());
+		return returListe;
+
+	}
 
 	public Utleiekontor(String utleiekontorNavn, int tlfnr, String adresse) {
 		this.utleiekontorNavn = utleiekontorNavn;

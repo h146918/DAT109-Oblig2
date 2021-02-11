@@ -15,6 +15,17 @@ public class Bil {
 	private String modell;
 	private String farge;
 	private String gruppe; // utleiegruppe
+	
+	private boolean erLedig;
+	//private Date utleiePeriode; 
+
+	public boolean isErLedig() {
+		return erLedig;
+	}
+
+	public void setErLedig(boolean erLedig) {
+		this.erLedig = erLedig;
+	}
 
 	public Bil(String regnr, String merke, String modell, String farge, String gruppe) {
 		this.regnr = regnr;
