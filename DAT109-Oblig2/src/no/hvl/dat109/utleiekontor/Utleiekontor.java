@@ -26,34 +26,34 @@ public class Utleiekontor {
 	private int tlfnr;
 	private String adresse;
 
-	public List<Bil> listeOverLedigeBiler() {
+	/**
+	 * Metode som returner en liste med Biler som er ledig i utleieBiler
+	 * 
+	 * 
+	 * @return Metode som returnerer en liste med biler som er ledige fra
+	 *         utleiekontoret
+	 * 
+	 * 
+	 * 
+	 */
 
-		/**
-		 * Metode som returner en liste med Biler som er ledig i utleieBiler
-		 * 
-		 * 
-		 * @return Metode som returnerer en liste med biler som er ledige fra
-		 *         utleiekontoret
-		 * 
-		 * 
-		 * 
-		 */
+	public List<Bil> listeOverLedigeBiler() {
 
 		List<Bil> returListe = utleieBiler.stream().filter(bil -> bil.isErLedig()).collect(Collectors.toList());
 		return returListe;
 
 	}
 
-	public void leggTilBil(Bil bil) {
+	/**
+	 * 
+	 * Metode som legger til en bil i utleieBiler
+	 * 
+	 * 
+	 * @return Metode som legger til en bil i listen til utleiekontoret
+	 * 
+	 */
 
-		/**
-		 * 
-		 * Metode som legger til en bil i utleieBiler
-		 * 
-		 * 
-		 * @return Metode som legger til en bil i listen til utleiekontoret
-		 * 
-		 */
+	public void leggTilBil(Bil bil) {
 
 		utleieBiler.add(bil);
 

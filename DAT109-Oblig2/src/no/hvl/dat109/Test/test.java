@@ -23,6 +23,8 @@ public class test {
 		Utleiekontor BGO = new Utleiekontor("BGO", 5632, "BlaBla");
 		BGO.leggTilBil(bil1);
 		
+		
+		
 		System.out.println(BGO.listeOverLedigeBiler().toString());
 		
 		
