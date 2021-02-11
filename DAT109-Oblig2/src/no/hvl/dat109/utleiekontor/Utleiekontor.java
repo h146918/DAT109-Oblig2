@@ -11,7 +11,7 @@ import no.hvl.dat109.bil.Bil;
  * 
  *         Denne klassen hånderer utleiekontorene
  * 
- *         v.01A
+ *         v.02A
  * 
  * 
  * 
@@ -22,17 +22,46 @@ public class Utleiekontor {
 
 	private String utleiekontorNavn;
 	private List<Bil> utleieBiler = new ArrayList<Bil>();
+	private int tlfnr;
+	private String adresse;
 
-	/**
-	 * 
-	 * Kommentar fra pål
-	 * 
-	 * Her må det komme litt mer stasj etterhvert, må også lage noen metoder i bil
-	 * for å implementere kontroll av utleie
-	 * 
-	 * slik som utleid, sjekkUtleid, dato etc...
-	 * 
-	 * 
-	 */
+	public Utleiekontor(String utleiekontorNavn, int tlfnr, String adresse) {
+		this.utleiekontorNavn = utleiekontorNavn;
+		this.tlfnr = tlfnr;
+		this.adresse = adresse;
+		this.utleieBiler = new ArrayList<Bil>();
+	}
+
+	public String getUtleiekontorNavn() {
+		return utleiekontorNavn;
+	}
+
+	public void setUtleiekontorNavn(String utleiekontorNavn) {
+		this.utleiekontorNavn = utleiekontorNavn;
+	}
+
+	public List<Bil> getUtleieBiler() {
+		return utleieBiler;
+	}
+
+	public void setUtleieBiler(List<Bil> utleieBiler) {
+		this.utleieBiler = utleieBiler;
+	}
+
+	public int getTlfnr() {
+		return tlfnr;
+	}
+
+	public void setTlfnr(int tlfnr) {
+		this.tlfnr = tlfnr;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
 
 }

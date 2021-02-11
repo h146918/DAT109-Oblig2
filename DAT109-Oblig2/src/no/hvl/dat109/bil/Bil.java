@@ -9,23 +9,21 @@ package no.hvl.dat109.bil;
  */
 
 public class Bil {
-	
+
 	private String regnr;
 	private String merke;
 	private String modell;
 	private String farge;
-	private String gruppe;		//utleiegruppe
-	private int km;				//kilometerstand
-	
-	public Bil(String regnr, String merke, String modell, String farge, String gruppe, int km) {
+	private String gruppe; // utleiegruppe
+
+	public Bil(String regnr, String merke, String modell, String farge, String gruppe) {
 		this.regnr = regnr;
 		this.merke = merke;
 		this.modell = modell;
 		this.farge = farge;
 		this.gruppe = gruppe;
-		this.km = km;
-	}
 
+	}
 
 	public String getRegnr() {
 		return regnr;
@@ -66,18 +64,13 @@ public class Bil {
 	public void setGruppe(String gruppe) {
 		this.gruppe = gruppe;
 	}
-	
+
 	public int getKm() {
 		return km;
 	}
-	
+
 	public void setKm(int km) {
 		this.km = km;
 	}
-	
-	
-	
-	
-	
 
 }
