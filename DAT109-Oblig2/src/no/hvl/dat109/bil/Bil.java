@@ -33,7 +33,7 @@ public class Bil {
 		this.modell = modell;
 		this.farge = farge;
 		this.gruppe = gruppe;
-
+		this.erLedig = true;
 	}
 
 	/**

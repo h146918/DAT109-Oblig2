@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -10,6 +11,15 @@
 
 	<form id="reserver" action="ReserverServlet" method="post">
 	<fieldset>
+	
+			<div>Ledige biler<select name="leidbil"> 
+			<c:forEach var="bil" items="${biler}">
+			<option value="${bil.regnr}" selected="selected">${bil.merke} ${bil.modell} ${bil.farge} - ${bil.gruppe}</option>
+			</c:forEach>
+		</select>
+		</div>
+	
+	
 			<div>
 				<label for="fornavn">Fornavn:</label> 
 				<input id="fornavn" type="text"

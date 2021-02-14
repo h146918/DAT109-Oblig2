@@ -20,7 +20,7 @@ import no.hvl.dat109.bil.Bil;
  */
 
 public class Utleiekontor {
-
+	
 	private String utleiekontorNavn;
 	private List<Bil> utleieBiler;
 	private int tlfnr;
@@ -59,12 +59,17 @@ public class Utleiekontor {
 
 	}
 
-	public Utleiekontor(String utleiekontorNavn, int tlfnr, String adresse) {
+	public Utleiekontor() {};
+	
+	public Utleiekontor(String utleiekontorNavn, int tlfnr, String adresse,List<Bil> utleieBiler) {
 		this.utleiekontorNavn = utleiekontorNavn;
 		this.tlfnr = tlfnr;
 		this.adresse = adresse;
-		this.utleieBiler = new ArrayList<Bil>();
+		this.utleieBiler = utleieBiler;
+		
 	}
+	
+	
 
 	public String getUtleiekontorNavn() {
 		return utleiekontorNavn;
