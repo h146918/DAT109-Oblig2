@@ -11,6 +11,21 @@ public class Controller {
 	List<Utleiekontor> utleiekontorer = new ArrayList<Utleiekontor>();
 	
 	
+	
+	public Bil finnBilMedReg(String regnr, List<Bil> liste) {
+		
+		Bil bil = new Bil();
+		
+		for(Bil b : liste) {
+		    if(b.getRegnr().equals(regnr)){
+		        bil = b;
+		    }
+		}
+		
+		return bil;
+	}
+	
+	
 	public void leggTilUtleiekontorer(Utleiekontor utleiekontor) {
 		utleiekontorer.add(utleiekontor);
 	}

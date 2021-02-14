@@ -14,54 +14,58 @@ package no.hvl.dat109.person;
 
 public class Person {
 
-	private String Fornavn;
-	private String Etternavn;
-	private String Adresse;
+	private String fornavn;
+	private String etternavn;
+	private String adresse;
 	private int telefon;
 
+
+
+	public Person(String fornavn, String etternavn, String adresse, int telefon) {
+		this.fornavn = fornavn;
+		this.etternavn = etternavn;
+		this.adresse = adresse;
+		this.telefon = telefon;
+	}
+	
+	
+	
 	public String getFornavn() {
-		return Fornavn;
+		return fornavn;
 	}
 
 	public void setFornavn(String fornavn) {
-		Fornavn = fornavn;
+		this.fornavn = fornavn;
 	}
 
 	public String getEtternavn() {
-		return Etternavn;
+		return this.etternavn;
 	}
 
 	public void setEtternavn(String etternavn) {
-		Etternavn = etternavn;
+		this.etternavn = etternavn;
 	}
 
 	public String getAdresse() {
-		return Adresse;
+		return this.adresse;
 	}
 
 	public void setAdresse(String adresse) {
-		Adresse = adresse;
+		this.adresse = adresse;
 	}
 
 	public int getTelefon() {
-		return telefon;
+		return this.telefon;
 	}
 
 	public void setTelefon(int telefon) {
 		this.telefon = telefon;
 	}
 
-	public Person(String fornavn, String etternavn, String adresse, int telefon) {
-		Fornavn = fornavn;
-		Etternavn = etternavn;
-		Adresse = adresse;
-		this.telefon = telefon;
-	}
+	
 
-	@Override
-	public String toString() {
-		return "Person [Fornavn=" + Fornavn + ", Etternavn=" + Etternavn + ", Adresse=" + Adresse + ", telefon="
-				+ telefon + "]";
-	}
+
+
+	
 
 }

@@ -27,6 +27,8 @@ public class Bil {
 		this.erLedig = erLedig;
 	}
 
+	public Bil() {};
+	
 	public Bil(String regnr, String merke, String modell, String farge, String gruppe) {
 		this.regnr = regnr;
 		this.merke = merke;
@@ -36,19 +38,7 @@ public class Bil {
 		this.erLedig = true;
 	}
 
-	/**
-	 * Tar inn en bil og returner Returnerer stringverdier for web
-	 * 
-	 * 
-	 * 
-	 * @return
-	 */
 
-	public String utskriftLedigBilWeb() {
-
-		return merke + " " + modell + " - " + farge + " - Gruppe: " + gruppe;
-
-	}
 
 	@Override
 	public String toString() {

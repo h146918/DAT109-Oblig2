@@ -12,6 +12,7 @@ import java.util.List;
 
 import no.hvl.dat109.bil.Bil;
 import no.hvl.dat109.controller.Controller;
+import no.hvl.dat109.person.Leieinformasjon;
 import no.hvl.dat109.utleiekontor.Utleiekontor;
 
 
@@ -41,11 +42,13 @@ public class SokServlet extends HttpServlet {
 		String fraDato = request.getParameter("fraDato");
 		String tilDato = request.getParameter("tilDato");
 		
+		Leieinformasjon leieinformasjon = new Leieinformasjon(utleieavdeling, returavdeling, fraDato, tilDato);
 		Utleiekontor utleiekontor = controller.finnUtleieKontor(utleieavdeling);
 		
 		
 		List<Bil> biler = utleiekontor.listeOverLedigeBiler();
 		
+		sesjon.setAttribute("leieinformasjon", leieinformasjon);
 		sesjon.setAttribute("biler", biler);
 		
 		response.sendRedirect("ReserverServlet");
