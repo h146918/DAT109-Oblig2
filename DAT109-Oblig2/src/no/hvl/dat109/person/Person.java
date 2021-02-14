@@ -1,16 +1,5 @@
 package no.hvl.dat109.person;
 
-/**
- * 
- * @author Gruppe 44
- * 
- *         V.01 Alpha
- * 
- *         Personklasse som oppretter en person etter at en kunde har lagret
- *         informasjon på nettsiden denne skal brukes videre for å holde
- *         kontroll på hvilken kunde som har reservert en bil
- *
- */
 
 public class Person {
 
