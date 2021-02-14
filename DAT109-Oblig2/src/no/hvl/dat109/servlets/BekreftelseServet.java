@@ -29,7 +29,6 @@ public class BekreftelseServet extends HttpServlet {
 		
 		HttpSession sesjon = request.getSession();
 		
-		
 		Person person = (Person) sesjon.getAttribute("Person");
 		Bil bil = (Bil) sesjon.getAttribute("Bil");
 		Leieinformasjon leieinformasjon = (Leieinformasjon) sesjon.getAttribute("leieinformasjon");
