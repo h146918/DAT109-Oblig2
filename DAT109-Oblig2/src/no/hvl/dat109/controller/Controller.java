@@ -65,5 +65,7 @@ public class Controller {
 		leggTilUtleiekontorer(utleiekontor4);
 
 	}
+	
+	
 
 }

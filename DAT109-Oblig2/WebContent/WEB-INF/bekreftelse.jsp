@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form id="bekreft" action="BekreftelseServet" method="post">
 <h1>Bekreftelse</h1>
 <p>Navn: ${Person.fornavn} ${Person.etternavn}</p>
 <p>Adresse: ${Person.adresse}</p>
@@ -26,6 +26,7 @@
 <p>Fra dato: ${leieinformasjon.fraDato}</p>
 <p>Til dato: ${leieinformasjon.tilDato}</p>
 
-
+<button type="submit">Hent nå</button>
+</form>
 </body>
 </html>
