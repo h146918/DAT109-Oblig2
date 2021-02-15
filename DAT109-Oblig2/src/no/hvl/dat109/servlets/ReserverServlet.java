@@ -1,6 +1,8 @@
 package no.hvl.dat109.servlets;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -45,7 +47,13 @@ public class ReserverServlet extends HttpServlet {
 
 		@SuppressWarnings("unchecked")
 		Bil bil = controller.finnBilMedReg(regnr, (List<Bil>) sesjon.getAttribute("biler"));
-		bil.setErLedig(false);
+		//bil.setErLedig(false);
+		
+		bil.setResFra((String) sesjon.getAttribute("fraDato"));
+		bil.setResTil((String) sesjon.getAttribute("tilDato"));
+		
+		//LocalDate date = new LocalDate((LocalDate)sesjon.getAttribute("fraDato"));
+	
 
 		sesjon.setAttribute("Bil", bil);
 		sesjon.setAttribute("Person", p);

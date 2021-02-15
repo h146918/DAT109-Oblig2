@@ -67,5 +67,17 @@ public class Controller {
 	}
 	
 	
+	public String parseDato(String datoString) {
+		
+		String[] dato = datoString.split("-");
+		
+		for(String d : dato) {
+			System.out.println(d);
+		}
+		
+		return "test";
+	}
+	
+	
 
 }

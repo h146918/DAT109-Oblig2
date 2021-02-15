@@ -27,6 +27,8 @@ public class Utleiekontor {
 
 		List<Bil> returListe = utleieBiler.stream().filter(bil -> bil.isErLedig()).collect(Collectors.toList());
 		return returListe;
+		
+		//Endre til å soke etter dato
 
 	}
 
