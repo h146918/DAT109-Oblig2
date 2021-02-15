@@ -1,23 +1,9 @@
 package no.hvl.dat109.utleiekontor;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import no.hvl.dat109.bil.Bil;
-
-/**
- * 
- * @author Gruppe 44
- * 
- *         Denne klassen hånderer utleiekontorene
- * 
- *         v.03A
- * 
- * 
- * 
- *
- */
 
 public class Utleiekontor {
 
@@ -59,11 +45,15 @@ public class Utleiekontor {
 
 	}
 
-	public Utleiekontor(String utleiekontorNavn, int tlfnr, String adresse) {
+	public Utleiekontor() {
+	};
+
+	public Utleiekontor(String utleiekontorNavn, int tlfnr, String adresse, List<Bil> utleieBiler) {
 		this.utleiekontorNavn = utleiekontorNavn;
 		this.tlfnr = tlfnr;
 		this.adresse = adresse;
-		this.utleieBiler = new ArrayList<Bil>();
+		this.utleieBiler = utleieBiler;
+
 	}
 
 	public String getUtleiekontorNavn() {

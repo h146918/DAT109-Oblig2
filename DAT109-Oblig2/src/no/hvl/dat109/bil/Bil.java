@@ -27,33 +27,16 @@ public class Bil {
 		this.erLedig = erLedig;
 	}
 
+	public Bil() {
+	};
+
 	public Bil(String regnr, String merke, String modell, String farge, String gruppe) {
 		this.regnr = regnr;
 		this.merke = merke;
 		this.modell = modell;
 		this.farge = farge;
 		this.gruppe = gruppe;
-
-	}
-
-	/**
-	 * Tar inn en bil og returner Returnerer stringverdier for web
-	 * 
-	 * 
-	 * 
-	 * @return
-	 */
-
-	public String utskriftLedigBilWeb() {
-
-		return merke + " " + modell + " - " + farge + " - Gruppe: " + gruppe;
-
-	}
-
-	@Override
-	public String toString() {
-		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge + ", gruppe="
-				+ gruppe + ", erLedig=" + erLedig + "]";
+		this.erLedig = true;
 	}
 
 	public String getRegnr() {
@@ -94,6 +77,12 @@ public class Bil {
 
 	public void setGruppe(String gruppe) {
 		this.gruppe = gruppe;
+	}
+
+	@Override
+	public String toString() {
+		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge + ", gruppe="
+				+ gruppe + ", erLedig=" + erLedig + "]";
 	}
 
 }
