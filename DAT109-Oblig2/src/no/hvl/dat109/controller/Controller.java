@@ -2,6 +2,7 @@ package no.hvl.dat109.controller;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import no.hvl.dat109.bil.Bil;
 import no.hvl.dat109.utleiekontor.Utleiekontor;
@@ -43,11 +44,11 @@ public class Controller {
 
 	public void opprettBilerOgKontorer() {
 
-		Bil b1 = new Bil("ST2323", "BMW", "S3", "Hvit", "GruppeA",124000);
-		Bil b2 = new Bil("EL8756", "Tesla", "Roadster", "Blå", "GruppeA",75000);
-		Bil b3 = new Bil("ST2323", "Audi", "A4", "Hvit", "GruppeA",200000);
-		Bil b4 = new Bil("ST2323", "Opel", "Astra", "Grønn", "GruppeA",170000);
-		Bil b5 = new Bil("ST2323", "Ford", "Focus", "Rød", "GruppeA",54000);
+		Bil b1 = new Bil("ST1", "BMW", "S3", "Hvit", "GruppeA",124000);
+		Bil b2 = new Bil("ST2", "Tesla", "Roadster", "Blå", "GruppeA",75000);
+		Bil b3 = new Bil("ST3", "Audi", "A4", "Hvit", "GruppeA",200000);
+		Bil b4 = new Bil("ST4", "Opel", "Astra", "Grønn", "GruppeA",170000);
+		Bil b5 = new Bil("ST5", "Ford", "Focus", "Rød", "GruppeA",54000);
 
 		List<Bil> l1 = new ArrayList<Bil>(Arrays.asList(b2, b3, b5));
 		List<Bil> l2 = new ArrayList<Bil>(Arrays.asList(b4, b1, b5));
@@ -67,15 +68,12 @@ public class Controller {
 	}
 	
 	
-	public String parseDato(String datoString) {
+	public Date stringTilDato(String datoString) {
 		
 		String[] dato = datoString.split("-");
-		
-		for(String d : dato) {
-			System.out.println(d);
-		}
-		
-		return "test";
+		@SuppressWarnings("deprecation")
+		 Date date = new Date(Integer.parseInt(dato[0]), Integer.parseInt(dato[1]),Integer.parseInt(dato[2]));
+		return date;
 	}
 	
 	

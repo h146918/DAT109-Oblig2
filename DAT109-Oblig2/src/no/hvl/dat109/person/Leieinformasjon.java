@@ -1,13 +1,15 @@
 package no.hvl.dat109.person;
 
+import java.util.Date;
+
 public class Leieinformasjon {
 	
 	private String utleieavdeling;
 	private String returavdeing;
-	private String fraDato;
-	private String tilDato;
+	private Date fraDato;
+	private Date tilDato;
 	
-	public Leieinformasjon(String utleieavdeling, String returavdeing, String fraDato, String tilDato) {
+	public Leieinformasjon(String utleieavdeling, String returavdeing, Date fraDato, Date tilDato) {
 		this.utleieavdeling = utleieavdeling;
 		this.returavdeing = returavdeing;
 		this.fraDato = fraDato;
@@ -30,21 +32,31 @@ public class Leieinformasjon {
 		this.returavdeing = returavdeing;
 	}
 
-	public String getFraDato() {
+	public String getReturavdeing() {
+		return returavdeing;
+	}
+
+	public void setReturavdeing(String returavdeing) {
+		this.returavdeing = returavdeing;
+	}
+
+	public Date getFraDato() {
 		return fraDato;
 	}
 
-	public void setFraDato(String fraDato) {
+	public void setFraDato(Date fraDato) {
 		this.fraDato = fraDato;
 	}
 
-	public String getTilDato() {
+	public Date getTilDato() {
 		return tilDato;
 	}
 
-	public void setTilDato(String tilDato) {
+	public void setTilDato(Date tilDato) {
 		this.tilDato = tilDato;
 	}
+
+
 	
 	
 

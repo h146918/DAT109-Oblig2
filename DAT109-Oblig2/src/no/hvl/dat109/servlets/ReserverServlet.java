@@ -14,6 +14,9 @@ import javax.servlet.http.HttpSession;
 
 import no.hvl.dat109.bil.Bil;
 import no.hvl.dat109.controller.Controller;
+import no.hvl.dat109.kunder.KundeServer;
+import no.hvl.dat109.kunder.Kundeinformasjon;
+import no.hvl.dat109.person.Leieinformasjon;
 import no.hvl.dat109.person.Person;
 
 @WebServlet("/ReserverServlet")
@@ -43,20 +46,32 @@ public class ReserverServlet extends HttpServlet {
 		int telefon = Integer.parseInt(telefonString);
 		int kreditkort = Integer.parseInt(kreditkortString);
 
-		Person p = new Person(fornavn, etternavn, adresse, telefon, kreditkort);
+		Person person = new Person(fornavn, etternavn, adresse, telefon, kreditkort);
 
 		@SuppressWarnings("unchecked")
 		Bil bil = controller.finnBilMedReg(regnr, (List<Bil>) sesjon.getAttribute("biler"));
 		//bil.setErLedig(false);
 		
-		bil.setResFra((String) sesjon.getAttribute("fraDato"));
-		bil.setResTil((String) sesjon.getAttribute("tilDato"));
+		Leieinformasjon info = (Leieinformasjon) sesjon.getAttribute("leieinformasjon");
 		
-		//LocalDate date = new LocalDate((LocalDate)sesjon.getAttribute("fraDato"));
-	
+		bil.setResFra(info.getFraDato());
+		bil.setResTil(info.getTilDato());
+		
+		
+		Kundeinformasjon kunde = new Kundeinformasjon(person, bil, info);
+		
+		System.out.println("Res fra : " + bil.getResFra());
+		System.out.println("Res til : " + bil.getResTil());
 
 		sesjon.setAttribute("Bil", bil);
-		sesjon.setAttribute("Person", p);
+		sesjon.setAttribute("Person", person);
+		
+		KundeServer.leggTilKunde(kunde);
+		KundeServer.finnKunde(bil.getRegnr());
+		KundeServer.SkrivUtServer();
+		
+		
+		//se over
 
 		response.sendRedirect("BekreftelseServet");
 

@@ -1,5 +1,7 @@
 package no.hvl.dat109.bil;
 
+import java.util.Date;
+
 /**
  * 
  * @author Gruppe 44
@@ -15,8 +17,8 @@ public class Bil {
 	private String modell;
 	private String farge;
 	private String gruppe;
-	private String resFra;
-	private String resTil;
+	private Date resFra = null;
+	private Date resTil = null;
 	private int km;
 
 	private boolean erLedig;
@@ -24,6 +26,12 @@ public class Bil {
 
 	public boolean isErLedig() {
 		return erLedig;
+	}
+
+	@Override
+	public String toString() {
+		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge + ", gruppe="
+				+ gruppe + ", resFra=" + resFra + ", resTil=" + resTil + ", km=" + km + ", erLedig=" + erLedig + "]";
 	}
 
 	public void setErLedig(boolean erLedig) {
@@ -92,27 +100,22 @@ public class Bil {
 		this.km = km;
 	}
 
-	
-	public String getResFra() {
+	public Date getResFra() {
 		return resFra;
 	}
 
-	public void setResFra(String resFra) {
+	public void setResFra(Date resFra) {
 		this.resFra = resFra;
 	}
 
-	public String getResTil() {
+	public Date getResTil() {
 		return resTil;
 	}
 
-	public void setResTil(String resTil) {
+	public void setResTil(Date resTil) {
 		this.resTil = resTil;
 	}
 
-	@Override
-	public String toString() {
-		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge + ", gruppe="
-				+ gruppe + ", erLedig=" + erLedig + "]";
-	}
+	
 
 }

@@ -43,11 +43,20 @@ public class KundeServer {
 		for (Kundeinformasjon kunde : server) {
 			if (kunde.getBil().getRegnr().equals(regnr)) {
 				kundeinformasjon = kunde;
+				System.out.println("Funnet!");
 			}
 
 		}
 
 		return kundeinformasjon;
+		
+	}
+	
+	public static void SkrivUtServer() {
+		
+		for(Kundeinformasjon k : server) {
+			System.out.println(k.getPerson().toString() + " " + k.getBil().toString());
+		}
 		
 	}
 

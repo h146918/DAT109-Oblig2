@@ -29,7 +29,8 @@ public class LeverServlet extends HttpServlet {
 		String returDato = request.getParameter("returDato");
 		
 		Kundeinformasjon kunde = KundeServer.finnKunde(regnr);
-		kunde.getBil().setErLedig(true);
+		kunde.getBil().setResFra(null);
+		kunde.getBil().setResTil(null);
 	
 		//Metode som regner ut km og pris
 		
