@@ -11,7 +11,7 @@
 
 	<form id="reserver" action="ReserverServlet" method="post">
 	<fieldset>
-	
+			<h1>Reserver bil</h1>
 			<div>Ledige biler<select name="leidbil"> 
 			<c:forEach var="bil" items="${biler}">
 			<option value="${bil.regnr}" selected="selected">${bil.merke} ${bil.modell} ${bil.farge} - ${bil.gruppe}</option>
@@ -49,7 +49,7 @@
 			</div>
 		
 			<div class="pure-controls">
-				<button id="btn" type="submit">Send inn</button>
+				<button id="btn" type="submit">Reserver nå</button>
 			</div>
 		</fieldset>
 	</form>

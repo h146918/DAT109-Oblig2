@@ -14,7 +14,9 @@ public class Bil {
 	private String merke;
 	private String modell;
 	private String farge;
-	private String gruppe; 
+	private String gruppe;
+	private String resFra;
+	private String resTil;
 	private int km;
 
 	private boolean erLedig;
@@ -38,7 +40,7 @@ public class Bil {
 		this.farge = farge;
 		this.gruppe = gruppe;
 		this.km = km;
-		this.erLedig = true;
+		//this.erLedig = true;
 	}
 
 	public String getRegnr() {
@@ -88,6 +90,23 @@ public class Bil {
 
 	public void setKm(int km) {
 		this.km = km;
+	}
+
+	
+	public String getResFra() {
+		return resFra;
+	}
+
+	public void setResFra(String resFra) {
+		this.resFra = resFra;
+	}
+
+	public String getResTil() {
+		return resTil;
+	}
+
+	public void setResTil(String resTil) {
+		this.resTil = resTil;
 	}
 
 	@Override

@@ -10,8 +10,8 @@
 
 <form id="form" action="SokServlet" method="post" >
 	<fieldset>
-	<div>
-	Utleieavdeling
+	<h1>Søk etter biler</h1>
+	<div> Utleieavdeling
 		<select name="utleieavdeling"> 
 			<option value="Bergen" selected="selected">Bergen</option>
 			<option value="Oslo">Oslo</option>
@@ -20,8 +20,7 @@
 		</select>
 		</div>
 		
-		<div>
-		Returavdeling
+		<div>Returavdeling
 		<select name="returavdeling"> 
 			<option value="Bergen" selected="selected">Bergen</option>
 			<option value="Oslo">Oslo</option>
@@ -36,7 +35,7 @@
 	
 	
 			<div>
-				<button id="btn" type="submit">Send inn</button>
+				<button id="btn" type="submit">Søk</button>
 			</div>
 	
 		</fieldset>

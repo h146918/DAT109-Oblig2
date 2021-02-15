@@ -52,6 +52,12 @@ public class SokServlet extends HttpServlet {
 		Leieinformasjon leieinformasjon = new Leieinformasjon(utleieavdeling, returavdeling, fraDato, tilDato);
 		Utleiekontor utleiekontor = controller.finnUtleieKontor(utleieavdeling);
 		
+		String[] dato = fraDato.split("-");
+		
+		for(String d : dato) {
+			System.out.println(d);
+		}
+		
 		
 		List<Bil> biler = utleiekontor.listeOverLedigeBiler();
 		
