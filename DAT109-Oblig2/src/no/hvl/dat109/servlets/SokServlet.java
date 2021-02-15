@@ -38,7 +38,7 @@ public class SokServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		HttpSession sesjon = request.getSession(true);
-		Controller controller = new Controller();
+		
 
 		// Legg til returmeding hvis parameterene er feil
 
@@ -50,13 +50,10 @@ public class SokServlet extends HttpServlet {
 		Date fraDato = controller.stringTilDato(fraDatoString);
 		Date tilDato = controller.stringTilDato(tilDatoString);
 		
-		
-		
-		
 		Leieinformasjon leieinformasjon = new Leieinformasjon(utleieavdeling, returavdeling, fraDato, tilDato);
 		Utleiekontor utleiekontor = controller.finnUtleieKontor(utleieavdeling);
 
-		List<Bil> biler = utleiekontor.listeOverLedigeBiler();
+		List<Bil> biler = utleiekontor.listeOverLedigeBiler(fraDato, tilDato);
 
 		sesjon.setAttribute("leieinformasjon", leieinformasjon);
 		sesjon.setAttribute("biler", biler);
