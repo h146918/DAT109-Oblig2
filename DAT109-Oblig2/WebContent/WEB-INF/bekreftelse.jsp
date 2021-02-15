@@ -29,6 +29,7 @@
 <p>Til dato: ${leieinformasjon.tilDato}</p>
 
 <button type="submit">Hent nå</button>
+<a href="SokServlet">Visit W3Schools</a>
 </form>
 </body>
 </html>

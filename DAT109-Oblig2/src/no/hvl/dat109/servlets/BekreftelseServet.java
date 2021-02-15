@@ -28,19 +28,20 @@ public class BekreftelseServet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession sesjon = request.getSession();
+//		
+//		
+//		Bil bil = (Bil) sesjon.getAttribute("Bil");
+//		Leieinformasjon leieinformasjon = (Leieinformasjon) sesjon.getAttribute("leieinformasjon");
+//		
+//		//se over
+//		
+//		KundeServer.leggTilKunde(kunde);
+//		KundeServer.finnKunde(bil.getRegnr());
+//		KundeServer.SkrivUtServer();
+//		sesjon.invalidate();
+//		
 		
-		Person person = (Person) sesjon.getAttribute("Person");
-		Bil bil = (Bil) sesjon.getAttribute("Bil");
-		Leieinformasjon leieinformasjon = (Leieinformasjon) sesjon.getAttribute("leieinformasjon");
-		
-		Kundeinformasjon kunde = new Kundeinformasjon(person, bil, leieinformasjon);
-		
-		KundeServer.leggTilKunde(kunde);
 		sesjon.invalidate();
-		
-		System.out.println("Reservasjon bekreftet!");
-		//Send til "bekreftet reservert"
-		
 		
 		response.sendRedirect("LeverServlet");
 	}

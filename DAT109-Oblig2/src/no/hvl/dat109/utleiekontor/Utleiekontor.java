@@ -1,5 +1,7 @@
 package no.hvl.dat109.utleiekontor;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,7 +13,7 @@ public class Utleiekontor {
 	private List<Bil> utleieBiler;
 	private int tlfnr;
 	private String adresse;
-
+	
 	/**
 	 * Metode som returner en liste med Biler som er ledig i utleieBiler
 	 * 
@@ -23,13 +25,27 @@ public class Utleiekontor {
 	 * 
 	 */
 
-	public List<Bil> listeOverLedigeBiler() {
-
-		List<Bil> returListe = utleieBiler.stream().filter(bil -> bil.isErLedig()).collect(Collectors.toList());
-		return returListe;
+	public List<Bil> listeOverLedigeBiler(Date fra, Date til) {
 		
-		//Endre til å soke etter dato
+	
 
+	   // List<Bil> returListe = utleieBiler.stream().filter(b ->  b.getResFra().before(fra)  ).collect(Collectors.toList());
+	    
+		List<Bil> returListe = new ArrayList<Bil>();
+		
+		
+		for(Bil b : utleieBiler) {
+			
+			if((b.getResFra() == null && b.getResTil() == null ) || ( b.getResFra().before(fra) &&  b.getResTil().after(til) )) {
+				returListe.add(b);
+			}
+			
+			
+		}
+		
+		
+        return returListe;
+		
 	}
 
 	/**
@@ -47,6 +63,7 @@ public class Utleiekontor {
 
 	}
 
+	
 	public Utleiekontor() {
 	};
 
