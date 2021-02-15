@@ -43,11 +43,11 @@ public class Controller {
 
 	public void opprettBilerOgKontorer() {
 
-		Bil b1 = new Bil("ST2323", "BMW", "S3", "Hvit", "GruppeA");
-		Bil b2 = new Bil("EL8756", "Tesla", "Roadster", "Blå", "GruppeA");
-		Bil b3 = new Bil("ST2323", "Audi", "A4", "Hvit", "GruppeA");
-		Bil b4 = new Bil("ST2323", "Opel", "Astra", "Grønn", "GruppeA");
-		Bil b5 = new Bil("ST2323", "Ford", "Focus", "Rød", "GruppeA");
+		Bil b1 = new Bil("ST2323", "BMW", "S3", "Hvit", "GruppeA",124000);
+		Bil b2 = new Bil("EL8756", "Tesla", "Roadster", "Blå", "GruppeA",75000);
+		Bil b3 = new Bil("ST2323", "Audi", "A4", "Hvit", "GruppeA",200000);
+		Bil b4 = new Bil("ST2323", "Opel", "Astra", "Grønn", "GruppeA",170000);
+		Bil b5 = new Bil("ST2323", "Ford", "Focus", "Rød", "GruppeA",54000);
 
 		List<Bil> l1 = new ArrayList<Bil>(Arrays.asList(b2, b3, b5));
 		List<Bil> l2 = new ArrayList<Bil>(Arrays.asList(b4, b1, b5));

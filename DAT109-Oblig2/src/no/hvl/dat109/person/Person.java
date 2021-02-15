@@ -1,24 +1,21 @@
 package no.hvl.dat109.person;
 
-
 public class Person {
 
 	private String fornavn;
 	private String etternavn;
 	private String adresse;
 	private int telefon;
+	private int kreditkort;
 
-
-
-	public Person(String fornavn, String etternavn, String adresse, int telefon) {
+	public Person(String fornavn, String etternavn, String adresse, int telefon, int kreditkort) {
 		this.fornavn = fornavn;
 		this.etternavn = etternavn;
 		this.adresse = adresse;
 		this.telefon = telefon;
+		this.kreditkort = kreditkort;
 	}
-	
-	
-	
+
 	public String getFornavn() {
 		return fornavn;
 	}
@@ -51,10 +48,12 @@ public class Person {
 		this.telefon = telefon;
 	}
 
-	
+	public int getKreditkort() {
+		return kreditkort;
+	}
 
-
-
-	
+	public void setKreditkort(int kreditkort) {
+		this.kreditkort = kreditkort;
+	}
 
 }

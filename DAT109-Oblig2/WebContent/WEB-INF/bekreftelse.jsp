@@ -12,9 +12,11 @@
 <p>Navn: ${Person.fornavn} ${Person.etternavn}</p>
 <p>Adresse: ${Person.adresse}</p>
 <p>Telefon: ${Person.telefon}</p>
+<p>Kreditkort: ${Person.kreditkort}</p>
 <p></p>
 <p>Bil</p>
 <p>Regnr: ${Bil.regnr}</p>
+<p>Km: ${Bil.km}</p>
 <p>Merke: ${Bil.merke}</p>
 <p>Modell: ${Bil.modell}</p>
 <p>Farge: ${Bil.farge}</p>

@@ -51,7 +51,7 @@ public class Utleiekontor {
 	public Utleiekontor(String utleiekontorNavn, int tlfnr, String adresse, List<Bil> utleieBiler) {
 		this.utleiekontorNavn = utleiekontorNavn;
 		this.tlfnr = tlfnr;
-		this.adresse = adresse;
+		this.adresse = adresse; // adresse, pnr , psted
 		this.utleieBiler = utleieBiler;
 
 	}

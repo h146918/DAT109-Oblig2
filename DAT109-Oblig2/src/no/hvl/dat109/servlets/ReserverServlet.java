@@ -36,10 +36,12 @@ public class ReserverServlet extends HttpServlet {
 		String etternavn = request.getParameter("etternavn");
 		String adresse = request.getParameter("adresse");
 		String telefonString = request.getParameter("telefon");
+		String kreditkortString = request.getParameter("kreditkort");
 
 		int telefon = Integer.parseInt(telefonString);
+		int kreditkort = Integer.parseInt(kreditkortString);
 
-		Person p = new Person(fornavn, etternavn, adresse, telefon);
+		Person p = new Person(fornavn, etternavn, adresse, telefon, kreditkort);
 
 		@SuppressWarnings("unchecked")
 		Bil bil = controller.finnBilMedReg(regnr, (List<Bil>) sesjon.getAttribute("biler"));
