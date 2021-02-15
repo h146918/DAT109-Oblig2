@@ -1,7 +1,6 @@
 package no.hvl.dat109.servlets;
 
 import java.io.IOException;
-import java.sql.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import java.util.Date;
 import java.util.List;
 
 import no.hvl.dat109.bil.Bil;
@@ -38,28 +38,23 @@ public class SokServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		HttpSession sesjon = request.getSession(true);
+		Controller controller = new Controller();
 
 		// Legg til returmeding hvis parameterene er feil
 
 		String utleieavdeling = request.getParameter("utleieavdeling");
 		String returavdeling = request.getParameter("returavdeling");
-		String fraDato = request.getParameter("fraDato");
-		String tilDato = request.getParameter("tilDato");
+		String fraDatoString = request.getParameter("fraDato");
+		String tilDatoString = request.getParameter("tilDato");
 
+		Date fraDato = controller.stringTilDato(fraDatoString);
+		Date tilDato = controller.stringTilDato(tilDatoString);
+		
+		
+		
+		
 		Leieinformasjon leieinformasjon = new Leieinformasjon(utleieavdeling, returavdeling, fraDato, tilDato);
 		Utleiekontor utleiekontor = controller.finnUtleieKontor(utleieavdeling);
-		System.out.println(fraDato);
-		System.out.println(tilDato);
-
-		String[] datoFra = fraDato.split("-");
-		String[] datoTil = fraDato.split("-");
-
-		@SuppressWarnings("deprecation")
-		Date UtleidFraDato = new Date(Integer.parseInt(datoFra[0]), Integer.parseInt(datoFra[1]),
-				Integer.parseInt(datoFra[2]));
-		@SuppressWarnings("deprecation")
-		Date UtleidTilDato = new Date(Integer.parseInt(datoTil[0]), Integer.parseInt(datoTil[1]),
-				Integer.parseInt(datoTil[2]));
 
 		List<Bil> biler = utleiekontor.listeOverLedigeBiler();
 
