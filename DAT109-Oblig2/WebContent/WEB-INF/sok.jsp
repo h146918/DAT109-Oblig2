@@ -10,7 +10,7 @@
 
 <form id="form" action="SokServlet" method="post" >
 	<fieldset>
-	<p>
+	<div>
 	Utleieavdeling
 		<select name="utleieavdeling"> 
 			<option value="Bergen" selected="selected">Bergen</option>
@@ -18,9 +18,9 @@
 			<option value="Stavanger">Stavanger</option>
 			<option value="Trondheim">Trondheim</option>
 		</select>
-		</p>
+		</div>
 		
-		<p>
+		<div>
 		Returavdeling
 		<select name="returavdeling"> 
 			<option value="Bergen" selected="selected">Bergen</option>
@@ -28,11 +28,11 @@
 			<option value="Stavanger">Stavanger</option>
 			<option value="Trondheim">Trondheim</option>
 		</select>
-		</p>
+		</div>
 		
 	
-	<p>Fra: <input id="fraDato" type="date" name="fraDato"></p>
-	<p>Til: <input id="tilDato" type="date" name="tilDato"></p>
+	<div>Fra: <input id="fraDato" type="date" name="fraDato"></div>
+	<div>Til: <input id="tilDato" type="date" name="tilDato"></div>
 	
 	
 			<div>

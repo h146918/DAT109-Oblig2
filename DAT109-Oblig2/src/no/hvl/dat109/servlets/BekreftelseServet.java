@@ -40,6 +40,9 @@ public class BekreftelseServet extends HttpServlet {
 		
 		System.out.println("Reservasjon bekreftet!");
 		//Send til "bekreftet reservert"
+		
+		
+		response.sendRedirect("LeverServlet");
 	}
 
 }

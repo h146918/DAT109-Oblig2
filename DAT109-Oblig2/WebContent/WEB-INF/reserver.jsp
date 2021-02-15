@@ -42,6 +42,12 @@
 					<font color="red">${feilTelefon}</font>
 			</div>
 		
+			<div>
+				<label for="kreditkort">Kreditkort:</label> <input id="kreditkort" type="text"
+					name="kreditkort" value="${kreditkort}" required /> 
+					<font color="red">${feilkreditkort}</font>
+			</div>
+		
 			<div class="pure-controls">
 				<button id="btn" type="submit">Send inn</button>
 			</div>

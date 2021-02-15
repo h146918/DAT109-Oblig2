@@ -15,25 +15,32 @@ import no.hvl.dat109.controller.Controller;
 import no.hvl.dat109.person.Leieinformasjon;
 import no.hvl.dat109.utleiekontor.Utleiekontor;
 
-
 @WebServlet("/SokServlet")
 public class SokServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
- 
 
+	Controller controller = new Controller();
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	public void init() throws ServletException { 
+		controller.opprettBilerOgKontorer();
+		
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.getRequestDispatcher("WEB-INF/sok.jsp").forward(request, response);
 	}
 
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		HttpSession sesjon = request.getSession(true);
 		
 		
-		Controller controller = new Controller();
-		controller.opprettBilerOgKontorer();
+		
+		
+		
+		
 		
 		// Legg til returmeding hvis parameterene er feil
 		

@@ -35,5 +35,20 @@ public class KundeServer {
 		return kundeinformasjon;
 		
 	}
+	
+	public static Kundeinformasjon finnKunde(String regnr) {
+
+		Kundeinformasjon kundeinformasjon = null;
+
+		for (Kundeinformasjon kunde : server) {
+			if (kunde.getBil().getRegnr().equals(regnr)) {
+				kundeinformasjon = kunde;
+			}
+
+		}
+
+		return kundeinformasjon;
+		
+	}
 
 }
