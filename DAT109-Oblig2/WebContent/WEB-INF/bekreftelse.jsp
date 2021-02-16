@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<fieldset>
 <form id="bekreft" action="BekreftelseServet" method="post">
 <h1>Utleie bekreftelse</h1>
 <p>Navn: ${Person.fornavn} ${Person.etternavn}</p>
@@ -27,9 +28,13 @@
 <p>Returavdeling: ${leieinformasjon.returavdeling}</p>
 <p>Fra dato: ${leieinformasjon.fraDato}</p>
 <p>Til dato: ${leieinformasjon.tilDato}</p>
-
-<button type="submit">Retur</button>
-<a href="SokServlet">Lei bil</a>
+<button type="submit">Returner bil </button>
 </form>
+<form action="SokServet" method="post">
+<p></p>
+<button type="submit">Lei bil</button>
+
+</form>
+</fieldset>
 </body>
 </html>
