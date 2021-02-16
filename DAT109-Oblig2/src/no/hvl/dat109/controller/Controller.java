@@ -84,17 +84,41 @@ public class Controller {
 		int fastpris = 550;
 		int gebyr = 750;
 
-		int dager = hentet.getDay() - faktiskLevering.getDay();
-		int mnd = (hentet.getMonth() - faktiskLevering.getMonth()) * 30;
-		int aar = (hentet.getYear() - faktiskLevering.getYear()) * 365;
+		int dager = faktiskLevering.getDay() - hentet.getDay() + 1;
+		int mnd = (faktiskLevering.getMonth() - hentet.getMonth()) * 30;
+		int aar = (faktiskLevering.getYear() - hentet.getYear()) * 365;
 
+		System.out.println("Dager: " + dager);
+		System.out.println("Mnd: " + mnd);
+		System.out.println("År: " + aar);
+		
 		int total = (dager + mnd + aar) * fastpris;
+		
+		System.out.println("Total: " + total);
 
 		if (!reservertAvdeling.equals(faktiskAvdeling)) {
 			total += gebyr;
+			System.out.println("Total m gebyr " + gebyr);
 		}
+		
+		
 
 		return total;
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -72,7 +72,7 @@ public class ReserverServlet extends HttpServlet {
 		KundeServer.SkrivUtServer();
 		
 		
-		
+		System.out.println(bil.toString());
 
 		response.sendRedirect("BekreftelseServet");
 
