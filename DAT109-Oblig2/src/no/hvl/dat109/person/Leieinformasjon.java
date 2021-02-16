@@ -32,13 +32,6 @@ public class Leieinformasjon {
 		this.returavdeing = returavdeing;
 	}
 
-	public String getReturavdeing() {
-		return returavdeing;
-	}
-
-	public void setReturavdeing(String returavdeing) {
-		this.returavdeing = returavdeing;
-	}
 
 	public Date getFraDato() {
 		return fraDato;

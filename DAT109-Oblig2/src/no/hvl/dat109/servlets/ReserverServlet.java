@@ -67,11 +67,12 @@ public class ReserverServlet extends HttpServlet {
 		sesjon.setAttribute("Person", person);
 		
 		KundeServer.leggTilKunde(kunde);
-		KundeServer.finnKunde(bil.getRegnr());
+		
+		//Test
 		KundeServer.SkrivUtServer();
 		
 		
-		//se over
+		
 
 		response.sendRedirect("BekreftelseServet");
 

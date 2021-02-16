@@ -49,7 +49,7 @@
 			</div>
 		
 			<div class="pure-controls">
-				<button id="btn" type="submit">Reserver nå</button>
+				<button id="btn" type="submit">Reserver</button>
 			</div>
 		</fieldset>
 	</form>

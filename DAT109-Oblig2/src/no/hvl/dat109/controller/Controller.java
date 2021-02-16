@@ -44,11 +44,11 @@ public class Controller {
 
 	public void opprettBilerOgKontorer() {
 
-		Bil b1 = new Bil("ST1", "BMW", "S3", "Hvit", "GruppeA",124000);
-		Bil b2 = new Bil("ST2", "Tesla", "Roadster", "Blå", "GruppeA",75000);
-		Bil b3 = new Bil("ST3", "Audi", "A4", "Hvit", "GruppeA",200000);
-		Bil b4 = new Bil("ST4", "Opel", "Astra", "Grønn", "GruppeA",170000);
-		Bil b5 = new Bil("ST5", "Ford", "Focus", "Rød", "GruppeA",54000);
+		Bil b1 = new Bil("ST1", "BMW", "S3", "Hvit", "GruppeA", 124000);
+		Bil b2 = new Bil("ST2", "Tesla", "Roadster", "Blå", "GruppeA", 75000);
+		Bil b3 = new Bil("ST3", "Audi", "A4", "Hvit", "GruppeA", 200000);
+		Bil b4 = new Bil("ST4", "Opel", "Astra", "Grønn", "GruppeA", 170000);
+		Bil b5 = new Bil("ST5", "Ford", "Focus", "Rød", "GruppeA", 54000);
 
 		List<Bil> l1 = new ArrayList<Bil>(Arrays.asList(b2, b3, b5));
 		List<Bil> l2 = new ArrayList<Bil>(Arrays.asList(b4, b1, b5));
@@ -66,16 +66,35 @@ public class Controller {
 		leggTilUtleiekontorer(utleiekontor4);
 
 	}
-	
-	
+
+	@SuppressWarnings("deprecation")
 	public Date stringTilDato(String datoString) {
-		
+
 		String[] dato = datoString.split("-");
-		@SuppressWarnings("deprecation")
-		 Date date = new Date(Integer.parseInt(dato[0]), Integer.parseInt(dato[1]),Integer.parseInt(dato[2]));
+
+		Date date = new Date(Integer.parseInt(dato[0]), Integer.parseInt(dato[1]), Integer.parseInt(dato[2]));
+		
 		return date;
 	}
-	
-	
+
+	@SuppressWarnings("deprecation")
+	public int regnUtPris(Date hentet, Date planlagtLevering, Date faktiskLevering, String reservertAvdeling,
+			String faktiskAvdeling) {
+
+		int fastpris = 550;
+		int gebyr = 750;
+
+		int dager = hentet.getDay() - faktiskLevering.getDay();
+		int mnd = (hentet.getMonth() - faktiskLevering.getMonth()) * 30;
+		int aar = (hentet.getYear() - faktiskLevering.getYear()) * 365;
+
+		int total = (dager + mnd + aar) * fastpris;
+
+		if (!reservertAvdeling.equals(faktiskAvdeling)) {
+			total += gebyr;
+		}
+
+		return total;
+	}
 
 }

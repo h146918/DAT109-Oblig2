@@ -8,7 +8,7 @@
 </head>
 <body>
 <form id="bekreft" action="BekreftelseServet" method="post">
-<h1>Bekreftelse</h1>
+<h1>Utleie bekreftelse</h1>
 <p>Navn: ${Person.fornavn} ${Person.etternavn}</p>
 <p>Adresse: ${Person.adresse}</p>
 <p>Telefon: ${Person.telefon}</p>
@@ -28,8 +28,8 @@
 <p>Fra dato: ${leieinformasjon.fraDato}</p>
 <p>Til dato: ${leieinformasjon.tilDato}</p>
 
-<button type="submit">Hent nå</button>
-<a href="SokServlet">Visit W3Schools</a>
+<button type="submit">Retur</button>
+<a href="SokServlet">Lei bil</a>
 </form>
 </body>
 </html>
