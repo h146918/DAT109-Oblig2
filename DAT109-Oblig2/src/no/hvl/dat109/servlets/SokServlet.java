@@ -32,6 +32,7 @@ public class SokServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.getRequestDispatcher("WEB-INF/sok.jsp").forward(request, response);
+		System.out.println("Søk Servlet");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

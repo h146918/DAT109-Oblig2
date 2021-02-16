@@ -28,6 +28,15 @@
 			
 			<div>Dato: <input id="returDato" type="date" name="returDato"></div>
 		
+			<div>Returavdeling
+		<select name="returavdeling"> 
+			<option value="Bergen" selected="selected">Bergen</option>
+			<option value="Oslo">Oslo</option>
+			<option value="Stavanger">Stavanger</option>
+			<option value="Trondheim">Trondheim</option>
+		</select>
+		</div>
+		
 			<div class="pure-controls">
 				<button id="btn" type="submit">Send inn</button>
 			</div>
