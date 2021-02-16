@@ -36,7 +36,8 @@ public class Utleiekontor {
 		
 		for(Bil b : utleieBiler) {
 			
-			if((b.getResFra() == null && b.getResTil() == null ) || ( b.getResFra().before(fra) &&  b.getResTil().after(til) )) {
+			if((b.getResFra() == null && b.getResTil() == null ) || ( b.getResFra().before(fra) &&  b.getResTil().after(til) )
+					|| ( b.getResFra().before(fra) &&  b.getResTil().before(til) )	|| ( b.getResFra().after(fra) &&  b.getResTil().after(til) )	 ) {
 				returListe.add(b);
 			}
 			
