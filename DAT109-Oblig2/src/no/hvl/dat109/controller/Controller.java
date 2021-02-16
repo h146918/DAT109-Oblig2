@@ -44,7 +44,6 @@ public class Controller {
 
 	public void opprettBilerOgKontorer() {
 
-		
 		Bil b1 = new Bil("ST58393", "BMW", "S3", "Hvit", "GruppeA", 124000);
 		Bil b2 = new Bil("EL62401", "Tesla", "Roadster", "Blå", "GruppeA", 75000);
 		Bil b3 = new Bil("ST35810", "Audi", "A4", "Hvit", "GruppeA", 200000);
