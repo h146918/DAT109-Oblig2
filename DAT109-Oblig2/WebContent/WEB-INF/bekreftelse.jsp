@@ -9,7 +9,7 @@
 <body>
 <fieldset>
 <form id="bekreft" action="BekreftelseServet" method="post">
-<h1>Utleie bekreftelse</h1>
+<h1>Bekreftelse</h1>
 <p>Navn: ${Person.fornavn} ${Person.etternavn}</p>
 <p>Adresse: ${Person.adresse}</p>
 <p>Telefon: ${Person.telefon}</p>
@@ -26,13 +26,13 @@
 <p>Leieinformasjon</p>
 <p>Utleieavdeling: ${leieinformasjon.utleieavdeling}</p>
 <p>Returavdeling: ${leieinformasjon.returavdeling}</p>
-<p>Fra dato: ${leieinformasjon.fraDato}</p>
-<p>Til dato: ${leieinformasjon.tilDato}</p>
-<button type="submit">Returner bil </button>
+<p>Fra dato: ${leieinformasjon.fraDato.date} - ${leieinformasjon.fraDato.month} - ${leieinformasjon.fraDato.year}</p>
+<p>Til dato: ${leieinformasjon.tilDato.date} - ${leieinformasjon.tilDato.month} - ${leieinformasjon.tilDato.year}</p>
+<button type="submit">Hent bilen </button>
 </form>
-<form action="SokServet" method="post">
+<form action="SokServlet" method="get">
 <p></p>
-<button type="submit">Lei bil</button>
+<button type="submit">Lei ny bil</button>
 
 </form>
 </fieldset>

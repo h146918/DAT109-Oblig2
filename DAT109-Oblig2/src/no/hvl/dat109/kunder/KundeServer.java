@@ -21,20 +21,20 @@ public class KundeServer {
 		}
 	}
 
-	public static Kundeinformasjon finnKunde(String fornavn, String etternavn) {
-
-		Kundeinformasjon kundeinformasjon = null;
-
-		for (Kundeinformasjon kunde : server) {
-			if (kunde.getPerson().getFornavn().equals(fornavn) && kunde.getPerson().getEtternavn().equals(etternavn)) {
-				kundeinformasjon = kunde;
-			}
-
-		}
-
-		return kundeinformasjon;
-		
-	}
+//	public static Kundeinformasjon finnKunde(String fornavn, String etternavn) {
+//
+//		Kundeinformasjon kundeinformasjon = null;
+//
+//		for (Kundeinformasjon kunde : server) {
+//			if (kunde.getPerson().getFornavn().equals(fornavn) && kunde.getPerson().getEtternavn().equals(etternavn)) {
+//				kundeinformasjon = kunde;
+//			}
+//
+//		}
+//
+//		return kundeinformasjon;
+//		
+//	}
 	
 	public static Kundeinformasjon finnKunde(String regnr) {
 

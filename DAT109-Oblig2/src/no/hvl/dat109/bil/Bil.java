@@ -20,23 +20,21 @@ public class Bil {
 	private Date resFra = null;
 	private Date resTil = null;
 	private int km;
+	
+	//pris *******************
 
-	private boolean erLedig;
+//	private boolean erLedig;
 	// private Date utleiePeriode;
 
-	public boolean isErLedig() {
-		return erLedig;
-	}
+//	public boolean isErLedig() {
+//		return erLedig;
+//	}
 
-	@Override
-	public String toString() {
-		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge + ", gruppe="
-				+ gruppe + ", resFra=" + resFra + ", resTil=" + resTil + ", km=" + km + ", erLedig=" + erLedig + "]";
-	}
 
-	public void setErLedig(boolean erLedig) {
-		this.erLedig = erLedig;
-	}
+
+//	public void setErLedig(boolean erLedig) {
+//		this.erLedig = erLedig;
+//	}
 
 	public Bil() {
 	};
@@ -114,6 +112,12 @@ public class Bil {
 
 	public void setResTil(Date resTil) {
 		this.resTil = resTil;
+	}
+
+	@Override
+	public String toString() {
+		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge + ", gruppe="
+				+ gruppe + ", resFra=" + resFra + ", resTil=" + resTil + ", km=" + km + "]";
 	}
 
 	

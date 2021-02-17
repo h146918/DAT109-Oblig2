@@ -43,7 +43,7 @@ public class BekreftelseServet extends HttpServlet {
 		
 		sesjon.invalidate();
 		
-		response.sendRedirect("LeverServlet");
+		response.sendRedirect("UtlevertServlet");
 	}
 
 }

@@ -86,9 +86,20 @@ public class Controller {
 	@SuppressWarnings("deprecation")
 	public Date stringTilDato(String datoString) {
 
+		System.out.println(datoString);
+		
 		String[] dato = datoString.split("-");
 
-		Date date = new Date(Integer.parseInt(dato[0]), Integer.parseInt(dato[1]), Integer.parseInt(dato[2]));
+		Date date = new Date();
+		date.setYear(Integer.parseInt(dato[0]));
+		date.setMonth(Integer.parseInt(dato[1]));
+		date.setDate(Integer.parseInt(dato[2]));
+		
+		System.out.println(dato[0]);
+		System.out.println(dato[1]);
+		System.out.println(dato[2]);
+		
+		System.out.println("mnd: " + date.getMonth());
 		
 		return date;
 	}
@@ -100,7 +111,7 @@ public class Controller {
 		int fastpris = 550;
 		int gebyr = 750;
 
-		int dager = faktiskLevering.getDay() - hentet.getDay() + 1;
+		int dager = faktiskLevering.getDate() - hentet.getDate() + 1;
 		int mnd = (faktiskLevering.getMonth() - hentet.getMonth()) * 30;
 		int aar = (faktiskLevering.getYear() - hentet.getYear()) * 365;
 
