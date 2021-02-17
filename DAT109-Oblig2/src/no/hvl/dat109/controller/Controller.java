@@ -48,38 +48,48 @@ public class Controller {
 		Bil b2 = new Bil("EL62401", "Tesla", "Roadster", "Blå", "GruppeA", 75000);
 		Bil b3 = new Bil("ST35810", "Audi", "A4", "Hvit", "GruppeA", 200000);
 		Bil b4 = new Bil("ST91724", "Opel", "Astra", "Grønn", "GruppeA", 170000);
-		Bil b5 = new Bil("ST15832", "Ford", "Focus", "Rød", "GruppeA", 54000);
+		Bil b5 = new Bil("ST15834", "Ford", "Focus", "Rød", "GruppeA", 54000);
+		Bil b6 = new Bil("ST58396", "BMW", "S3", "Rød", "GruppeA", 124000);
+		Bil b7 = new Bil("EL62491", "Tesla", "Roadster", "Sort", "GruppeA", 75000);
+		Bil b8 = new Bil("ST33810", "Audi", "A4", "Gul", "GruppeA", 200000);
+		Bil b9 = new Bil("ST95624", "Opel", "Astra", "Grønn", "GruppeA", 170000);
+		Bil b10 = new Bil("ST18432", "Ford", "Focus", "Rød", "GruppeA", 54000);
 		
 		//Stor bil
-		Bil b6 = new Bil("EL60351", "Nissan", "Evalia", "Hvit", "GruppeC", 14100);
-		Bil b7 = new Bil("ST51485", "Volkswagen", "Caddy", "Blå", "GruppeC", 98000);
-		Bil b8 = new Bil("ST71942", "Fiat", "Talento", "Sort", "GruppeC", 73000);
-		Bil b9 = new Bil("ST90248", "Ford", "Transit", "Metallic", "GruppeC", 140000);
-		Bil b10 = new Bil("ST13522", "Ford", "Caravelle", "Grønn", "GruppeC", 151000);
-		Bil b11 = new Bil("ST94512", "Citroen", "Berlingo", "Rød", "GruppeC", 173000);
+		Bil b11 = new Bil("EL60351", "Nissan", "Evalia", "Hvit", "GruppeC", 14100);
+		Bil b12 = new Bil("ST51485", "Volkswagen", "Caddy", "Blå", "GruppeC", 98000);
+		Bil b13 = new Bil("ST71942", "Fiat", "Talento", "Sort", "GruppeC", 73000);
+		Bil b14 = new Bil("ST90248", "Ford", "Transit", "Metallic", "GruppeC", 140000);
+		Bil b15 = new Bil("ST13522", "Ford", "Caravelle", "Grønn", "GruppeC", 151000);
+		Bil b16 = new Bil("ST94512", "Citroen", "Berlingo", "Rød", "GruppeC", 173000);
 		
 		//Stasjonsvogn
-		Bil b12 = new Bil("ST51284", "Volvo", "V90", "Sort", "GruppeD", 54000);
-		Bil b13 = new Bil("ST71252", "Skoda", "Oktavia", "Metallic", "GruppeD", 42000);
-		Bil b14 = new Bil("ST41270", "Mercedes-Benz", "C200 T", "Blå", "GruppeD", 96000);
-		Bil b15 = new Bil("ST51263", "Mercedes-Benz", "C300e", "Sort", "GruppeD", 86000);
-		Bil b16 = new Bil("ST15050", "Audi", "RS6", "Grå", "GruppeD", 103000);
-		Bil b17 = new Bil("ST62791", "Volkswagen", "Passat", "Hvit", "GruppeD", 242000);
+		Bil b17 = new Bil("ST51284", "Volvo", "V90", "Sort", "GruppeD", 54000);
+		Bil b18 = new Bil("ST71252", "Skoda", "Oktavia", "Metallic", "GruppeD", 42000);
+		Bil b19 = new Bil("ST41270", "Mercedes-Benz", "C200 T", "Blå", "GruppeD", 96000);
+		Bil b20 = new Bil("ST51263", "Mercedes-Benz", "C300e", "Sort", "GruppeD", 86000);
+		Bil b21 = new Bil("ST15050", "Audi", "RS6", "Grå", "GruppeD", 103000);
+		Bil b22 = new Bil("ST62791", "Volkswagen", "Passat", "Hvit", "GruppeD", 242000);
 
 		List<Bil> l1 = new ArrayList<Bil>(Arrays.asList(b2, b3, b5, b6, b9, b12, b15));
-		List<Bil> l2 = new ArrayList<Bil>(Arrays.asList(b4, b1, b5, b7, b10, b16));
+		List<Bil> l2 = new ArrayList<Bil>(Arrays.asList(b4, b1, b5, b7, b17, b18));
 		List<Bil> l3 = new ArrayList<Bil>(Arrays.asList(b2, b1, b5, b8, b11, b17));
 		List<Bil> l4 = new ArrayList<Bil>(Arrays.asList(b2, b3, b4, b13, b14));
+		List<Bil> l5 = new ArrayList<Bil>(Arrays.asList(b19, b20, b21, b22));
 
 		Utleiekontor utleiekontor1 = new Utleiekontor("Bergen", 65786578, "Hovedgate1", l1);
 		Utleiekontor utleiekontor2 = new Utleiekontor("Oslo", 65786578, "Hovedgate2", l2);
 		Utleiekontor utleiekontor3 = new Utleiekontor("Stavanger", 65786578, "Hovedgate3", l3);
 		Utleiekontor utleiekontor4 = new Utleiekontor("Trondheim", 65786578, "Hovedgate4", l4);
+		Utleiekontor utleiekontor5 = new Utleiekontor("Bergen, Flesland", 65786578, "Flesland", l5);
+		Utleiekontor utleiekontor6 = new Utleiekontor("Oslo, Gardermoen", 65786578, "Gardermoen", l4);
 
 		leggTilUtleiekontorer(utleiekontor1);
 		leggTilUtleiekontorer(utleiekontor2);
 		leggTilUtleiekontorer(utleiekontor3);
 		leggTilUtleiekontorer(utleiekontor4);
+		leggTilUtleiekontorer(utleiekontor5);
+		leggTilUtleiekontorer(utleiekontor6);
 
 	}
 
