@@ -17,6 +17,7 @@ public class Bil {
 	private String modell;
 	private String farge;
 	private String gruppe;
+	private int pris;
 	private Date resFra = null;
 	private Date resTil = null;
 	private int km;
@@ -39,12 +40,13 @@ public class Bil {
 	public Bil() {
 	};
 
-	public Bil(String regnr, String merke, String modell, String farge, String gruppe, int km) {
+	public Bil(String regnr, String merke, String modell, String farge, String gruppe, int pris,  int km) {
 		this.regnr = regnr;
 		this.merke = merke;
 		this.modell = modell;
 		this.farge = farge;
 		this.gruppe = gruppe;
+		this.pris = pris;
 		this.km = km;
 		//this.erLedig = true;
 	}
@@ -114,12 +116,21 @@ public class Bil {
 		this.resTil = resTil;
 	}
 
+	public int getPris() {
+		return pris;
+	}
+
+	public void setPris(int pris) {
+		this.pris = pris;
+	}
+
 	@Override
 	public String toString() {
 		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge + ", gruppe="
-				+ gruppe + ", resFra=" + resFra + ", resTil=" + resTil + ", km=" + km + "]";
+				+ gruppe + ", pris=" + pris + ", resFra=" + resFra + ", resTil=" + resTil + ", km=" + km + "]";
 	}
 
+	
 	
 
 }
