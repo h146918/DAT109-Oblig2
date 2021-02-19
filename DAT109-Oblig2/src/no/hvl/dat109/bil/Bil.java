@@ -22,20 +22,6 @@ public class Bil {
 	private Date resTil = null;
 	private int km;
 	
-	//pris *******************
-
-//	private boolean erLedig;
-	// private Date utleiePeriode;
-
-//	public boolean isErLedig() {
-//		return erLedig;
-//	}
-
-
-
-//	public void setErLedig(boolean erLedig) {
-//		this.erLedig = erLedig;
-//	}
 
 	public Bil() {
 	};
@@ -48,7 +34,6 @@ public class Bil {
 		this.gruppe = gruppe;
 		this.pris = pris;
 		this.km = km;
-		//this.erLedig = true;
 	}
 
 	public String getRegnr() {

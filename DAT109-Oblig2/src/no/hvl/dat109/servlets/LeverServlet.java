@@ -37,10 +37,7 @@ public class LeverServlet extends HttpServlet {
 		
 		Kundeinformasjon kunde = KundeServer.finnKunde(regnr);
 		
-		//Metode som regner ut km og pris
-		
 		int pris = controller.regnUtPris(kunde.getBil().getResFra(), kunde.getBil().getResTil(), returDato, kunde.getLeieinformasjon().getReturavdeling(),faktiskReturAvdeling );
-		
 		
 		kunde.getBil().setResFra(null);
 		kunde.getBil().setResTil(null);
@@ -48,11 +45,6 @@ public class LeverServlet extends HttpServlet {
 		int km= Integer.parseInt(kmstand);
 		kunde.getBil().setKm(km);
 	
-		
-		System.out.println("Din pris er " + pris);
-		
-
-		
 		response.sendRedirect("SokServlet");
 		
 	}

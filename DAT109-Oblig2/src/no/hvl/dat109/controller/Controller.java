@@ -50,26 +50,26 @@ public class Controller {
 		Bil b4 = new Bil("ST91724", "Opel", "Astra", "Grønn", "Gruppe A", 750, 170000);
 		Bil b5 = new Bil("ST15834", "Ford", "Focus", "Rød", "Gruppe A", 750, 54000);
 		Bil b6 = new Bil("ST58396", "BMW", "S3", "Rød", "Gruppe A", 750, 124000);
-		Bil b7 = new Bil("EL62491", "Tesla", "Roadster", "Sort", "Gruppe A",  750, 75000);
+		Bil b7 = new Bil("EL62491", "Tesla", "Roadster", "Sort", "Gruppe A", 750, 75000);
 		Bil b8 = new Bil("ST33810", "Audi", "A4", "Gul", "Gruppe A", 750, 200000);
 		Bil b9 = new Bil("ST95624", "Opel", "Astra", "Grønn", "Gruppe A", 750, 170000);
 		Bil b10 = new Bil("ST18432", "Ford", "Focus", "Rød", "Gruppe A", 750, 54000);
 		
 		//Stor bil
-		Bil b11 = new Bil("EL60351", "Nissan", "Evalia", "Hvit", "Gruppe C", 750, 14100);
-		Bil b12 = new Bil("ST51485", "Volkswagen", "Caddy", "Blå", "Gruppe C", 750, 98000);
-		Bil b13 = new Bil("ST71942", "Fiat", "Talento", "Sort", "Gruppe C", 750, 73000);
-		Bil b14 = new Bil("ST90248", "Ford", "Transit", "Metallic", "Gruppe C", 750, 140000);
-		Bil b15 = new Bil("ST13522", "Ford", "Caravelle", "Grønn", "Gruppe C", 750, 151000);
-		Bil b16 = new Bil("ST94512", "Citroen", "Berlingo", "Rød", "Gruppe C", 750, 173000);
+		Bil b11 = new Bil("EL60351", "Nissan", "Evalia", "Hvit", "Gruppe C", 1100, 14100);
+		Bil b12 = new Bil("ST51485", "Volkswagen", "Caddy", "Blå", "Gruppe C", 1100, 98000);
+		Bil b13 = new Bil("ST71942", "Fiat", "Talento", "Sort", "Gruppe C", 1100, 73000);
+		Bil b14 = new Bil("ST90248", "Ford", "Transit", "Metallic", "Gruppe C", 1100, 140000);
+		Bil b15 = new Bil("ST13522", "Ford", "Caravelle", "Grønn", "Gruppe C", 1100, 151000);
+		Bil b16 = new Bil("ST94512", "Citroen", "Berlingo", "Rød", "Gruppe C", 1100, 173000);
 		
 		//Stasjonsvogn
-		Bil b17 = new Bil("ST51284", "Volvo", "V90", "Sort", "Gruppe D", 750, 54000);
-		Bil b18 = new Bil("ST71252", "Skoda", "Oktavia", "Metallic", "Gruppe D", 750, 42000);
-		Bil b19 = new Bil("ST41270", "Mercedes-Benz", "C200 T", "Blå", "Gruppe D", 750, 96000);
-		Bil b20 = new Bil("ST51263", "Mercedes-Benz", "C300e", "Sort", "Gruppe D", 750, 86000);
-		Bil b21 = new Bil("ST15050", "Audi", "RS6", "Grå", "Gruppe D", 750, 103000);
-		Bil b22 = new Bil("ST62791", "Volkswagen", "Passat", "Hvit", "Gruppe D", 750, 242000);
+		Bil b17 = new Bil("ST51284", "Volvo", "V90", "Sort", "Gruppe D", 900, 54000);
+		Bil b18 = new Bil("ST71252", "Skoda", "Oktavia", "Metallic", "Gruppe D", 900, 42000);
+		Bil b19 = new Bil("ST41270", "Mercedes-Benz", "C200 T", "Blå", "Gruppe D", 900, 96000);
+		Bil b20 = new Bil("ST51263", "Mercedes-Benz", "C300e", "Sort", "Gruppe D", 900, 86000);
+		Bil b21 = new Bil("ST15050", "Audi", "RS6", "Grå", "Gruppe D", 900, 103000);
+		Bil b22 = new Bil("ST62791", "Volkswagen", "Passat", "Hvit", "Gruppe D", 900, 242000);
 
 		List<Bil> l1 = new ArrayList<Bil>(Arrays.asList(b2, b3, b5, b6, b9, b12, b15));
 		List<Bil> l2 = new ArrayList<Bil>(Arrays.asList(b4, b1, b5, b7, b17, b18));
@@ -77,12 +77,12 @@ public class Controller {
 		List<Bil> l4 = new ArrayList<Bil>(Arrays.asList(b2, b3, b4, b13, b14));
 		List<Bil> l5 = new ArrayList<Bil>(Arrays.asList(b19, b20, b21, b22));
 
-		Utleiekontor utleiekontor1 = new Utleiekontor("Bergen", 65786578, "Hovedgate1", l1);
-		Utleiekontor utleiekontor2 = new Utleiekontor("Oslo", 65786578, "Hovedgate2", l2);
-		Utleiekontor utleiekontor3 = new Utleiekontor("Stavanger", 65786578, "Hovedgate3", l3);
-		Utleiekontor utleiekontor4 = new Utleiekontor("Trondheim", 65786578, "Hovedgate4", l4);
-		Utleiekontor utleiekontor5 = new Utleiekontor("Bergen, Flesland", 65786578, "Flesland", l5);
-		Utleiekontor utleiekontor6 = new Utleiekontor("Oslo, Gardermoen", 65786578, "Gardermoen", l4);
+		Utleiekontor utleiekontor1 = new Utleiekontor("Bergen", 55292500, "Kanalveien 48", l1);
+		Utleiekontor utleiekontor2 = new Utleiekontor("Oslo", 22210000, "Jernbanetorget 1", l2);
+		Utleiekontor utleiekontor3 = new Utleiekontor("Stavanger", 51538202, "Olav V s gate 13", l3);
+		Utleiekontor utleiekontor4 = new Utleiekontor("Trondheim", 73503500, "Bratsbergvegen 11-13", l4);
+		Utleiekontor utleiekontor5 = new Utleiekontor("Bergen, Flesland", 55226075, "Flyplassenvegen 555", l5);
+		Utleiekontor utleiekontor6 = new Utleiekontor("Oslo, Gardermoen", 22210000, "Edvard Munchs veg 2060", l4);
 
 		leggTilUtleiekontorer(utleiekontor1);
 		leggTilUtleiekontorer(utleiekontor2);

@@ -68,12 +68,6 @@ public class ReserverServlet extends HttpServlet {
 		
 		KundeServer.leggTilKunde(kunde);
 		
-		//Test
-		KundeServer.SkrivUtServer();
-		
-		
-		System.out.println(bil.toString());
-
 		response.sendRedirect("BekreftelseServet");
 
 	}
