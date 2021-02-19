@@ -50,7 +50,6 @@ public class ReserverServlet extends HttpServlet {
 
 		@SuppressWarnings("unchecked")
 		Bil bil = controller.finnBilMedReg(regnr, (List<Bil>) sesjon.getAttribute("biler"));
-		//bil.setErLedig(false);
 		
 		Leieinformasjon info = (Leieinformasjon) sesjon.getAttribute("leieinformasjon");
 		

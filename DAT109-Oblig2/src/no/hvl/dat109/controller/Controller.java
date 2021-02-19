@@ -69,32 +69,32 @@ public class Controller {
 	 */
 	public void opprettBilerOgKontorer() {
 
-		Bil b1 = new Bil("ST58393", "BMW", "S3", "Hvit", "Gruppe A", 750, 124000);
-		Bil b2 = new Bil("EL62401", "Tesla", "Roadster", "Blå", "Gruppe A", 750, 75000);
-		Bil b3 = new Bil("ST35810", "Audi", "A4", "Hvit", "Gruppe A", 750, 200000);
-		Bil b4 = new Bil("ST91724", "Opel", "Astra", "Grønn", "Gruppe A", 750, 170000);
-		Bil b5 = new Bil("ST15834", "Ford", "Focus", "Rød", "Gruppe A", 750, 54000);
-		Bil b6 = new Bil("ST58396", "BMW", "S3", "Rød", "Gruppe A", 750, 124000);
-		Bil b7 = new Bil("EL62491", "Tesla", "Roadster", "Sort", "Gruppe A", 750, 75000);
-		Bil b8 = new Bil("ST33810", "Audi", "A4", "Gul", "Gruppe A", 750, 200000);
-		Bil b9 = new Bil("ST95624", "Opel", "Astra", "Grønn", "Gruppe A", 750, 170000);
-		Bil b10 = new Bil("ST18432", "Ford", "Focus", "Rød", "Gruppe A", 750, 54000);
+		Bil b1 = new Bil("ST58393", "BMW", "S3", "Hvit", " A", 750, 124000);
+		Bil b2 = new Bil("EL62401", "Tesla", "Roadster", "Blå", " A", 750, 75000);
+		Bil b3 = new Bil("ST35810", "Audi", "A4", "Hvit", " A", 750, 200000);
+		Bil b4 = new Bil("ST91724", "Opel", "Astra", "Grønn", " A", 750, 170000);
+		Bil b5 = new Bil("ST15834", "Ford", "Focus", "Rød", " A", 750, 54000);
+		Bil b6 = new Bil("ST58396", "BMW", "S3", "Rød", " A", 750, 124000);
+		Bil b7 = new Bil("EL62491", "Tesla", "Roadster", "Sort", " A", 750, 75000);
+		Bil b8 = new Bil("ST33810", "Audi", "A4", "Gul", " A", 750, 200000);
+		Bil b9 = new Bil("ST95624", "Opel", "Astra", "Grønn", " A", 750, 170000);
+		Bil b10 = new Bil("ST18432", "Ford", "Focus", "Rød", " A", 750, 54000);
 
 		// Stor bil
-		Bil b11 = new Bil("EL60351", "Nissan", "Evalia", "Hvit", "Gruppe C", 1100, 14100);
-		Bil b12 = new Bil("ST51485", "Volkswagen", "Caddy", "Blå", "Gruppe C", 1100, 98000);
-		Bil b13 = new Bil("ST71942", "Fiat", "Talento", "Sort", "Gruppe C", 1100, 73000);
-		Bil b14 = new Bil("ST90248", "Ford", "Transit", "Metallic", "Gruppe C", 1100, 140000);
-		Bil b15 = new Bil("ST13522", "Ford", "Caravelle", "Grønn", "Gruppe C", 1100, 151000);
-		Bil b16 = new Bil("ST94512", "Citroen", "Berlingo", "Rød", "Gruppe C", 1100, 173000);
+		Bil b11 = new Bil("EL60351", "Nissan", "Evalia", "Hvit", " C", 1100, 14100);
+		Bil b12 = new Bil("ST51485", "Volkswagen", "Caddy", "Blå", " C", 1100, 98000);
+		Bil b13 = new Bil("ST71942", "Fiat", "Talento", "Sort", " C", 1100, 73000);
+		Bil b14 = new Bil("ST90248", "Ford", "Transit", "Metallic", " C", 1100, 140000);
+		Bil b15 = new Bil("ST13522", "Ford", "Caravelle", "Grønn", " C", 1100, 151000);
+		Bil b16 = new Bil("ST94512", "Citroen", "Berlingo", "Rød", " C", 1100, 173000);
 
 		// Stasjonsvogn
-		Bil b17 = new Bil("ST51284", "Volvo", "V90", "Sort", "Gruppe D", 900, 54000);
-		Bil b18 = new Bil("ST71252", "Skoda", "Oktavia", "Metallic", "Gruppe D", 900, 42000);
-		Bil b19 = new Bil("ST41270", "Mercedes-Benz", "C200 T", "Blå", "Gruppe D", 900, 96000);
-		Bil b20 = new Bil("ST51263", "Mercedes-Benz", "C300e", "Sort", "Gruppe D", 900, 86000);
-		Bil b21 = new Bil("ST15050", "Audi", "RS6", "Grå", "Gruppe D", 900, 103000);
-		Bil b22 = new Bil("ST62791", "Volkswagen", "Passat", "Hvit", "Gruppe D", 900, 242000);
+		Bil b17 = new Bil("ST51284", "Volvo", "V90", "Sort", " D", 900, 54000);
+		Bil b18 = new Bil("ST71252", "Skoda", "Oktavia", "Metallic", " D", 900, 42000);
+		Bil b19 = new Bil("ST41270", "Mercedes-Benz", "C200 T", "Blå", " D", 900, 96000);
+		Bil b20 = new Bil("ST51263", "Mercedes-Benz", "C300e", "Sort", " D", 900, 86000);
+		Bil b21 = new Bil("ST15050", "Audi", "RS6", "Grå", " D", 900, 103000);
+		Bil b22 = new Bil("ST62791", "Volkswagen", "Passat", "Hvit", " D", 900, 242000);
 
 		List<Bil> l1 = new ArrayList<Bil>(Arrays.asList(b2, b3, b5, b6, b9, b12, b15));
 		List<Bil> l2 = new ArrayList<Bil>(Arrays.asList(b4, b1, b5, b7, b17, b18));
@@ -166,9 +166,6 @@ public class Controller {
 		int mnd = (faktiskLevering.getMonth() - hentet.getMonth()) * 30;
 		int aar = (faktiskLevering.getYear() - hentet.getYear()) * 365;
 
-		System.out.println("Dager: " + dager);
-		System.out.println("Mnd: " + mnd);
-		System.out.println("År: " + aar);
 
 		int total = (dager + mnd + aar) * fastpris;
 
@@ -176,7 +173,6 @@ public class Controller {
 
 		if (!reservertAvdeling.equals(faktiskAvdeling)) {
 			total += gebyr;
-			System.out.println("Total m gebyr " + gebyr);
 		}
 
 		return total;

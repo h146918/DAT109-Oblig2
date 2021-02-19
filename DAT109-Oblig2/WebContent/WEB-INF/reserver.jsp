@@ -14,7 +14,7 @@
 			<h1>Reserver bil</h1>
 			<div>Ledige biler<select name="leidbil"> 
 			<c:forEach var="bil" items="${biler}">
-			<option value="${bil.regnr}" selected="selected">${bil.merke} ${bil.modell} - ${bil.farge} - ${bil.gruppe} - ${bil.pris} kr</option>
+			<option value="${bil.regnr}" selected="selected">${bil.merke} ${bil.modell} - ${bil.farge} - Gruppe: ${bil.gruppe} - ${bil.pris} kr</option>
 			</c:forEach>
 		</select>
 		</div>

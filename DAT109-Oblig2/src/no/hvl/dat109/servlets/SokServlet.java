@@ -39,9 +39,6 @@ public class SokServlet extends HttpServlet {
 
 		HttpSession sesjon = request.getSession(true);
 		
-
-		// Legg til returmeding hvis parameterene er feil
-
 		String utleieavdeling = request.getParameter("utleieavdeling");
 		String returavdeling = request.getParameter("returavdeling");
 		String fraDatoString = request.getParameter("fraDato");
@@ -57,6 +54,7 @@ public class SokServlet extends HttpServlet {
 
 		sesjon.setAttribute("leieinformasjon", leieinformasjon);
 		sesjon.setAttribute("biler", biler);
+		sesjon.setAttribute("utleiekontor", utleiekontor);
 
 		response.sendRedirect("ReserverServlet");
 

@@ -10,24 +10,42 @@
 <fieldset>
 <form id="bekreft" action="BekreftelseServet" method="post">
 <h1>Bekreftelse</h1>
+<div style="display: flex;">
+<div style="width: 300px">
+<h2>Kundeinformasjon</h2>
 <p>Navn: ${Person.fornavn} ${Person.etternavn}</p>
 <p>Adresse: ${Person.adresse}</p>
 <p>Telefon: ${Person.telefon}</p>
 <p>Kreditkort: ${Person.kreditkort}</p>
-<p></p>
-<p>Bil</p>
+</div>
+<div style="width: 300px">
+<h2>Utleiekontor</h2>
+<p>BestRent avd: ${utleiekontor.utleiekontorNavn}</p>
+<p>Adresse: ${utleiekontor.adresse}</p>
+<p>Telefon: ${utleiekontor.tlfnr}</p>
+</div>
+</div>
+
+<div style="display: flex;">
+<div style="width: 300px">
+<h2>Bil</h2>
 <p>Regnr: ${Bil.regnr}</p>
 <p>Km: ${Bil.km}</p>
 <p>Merke: ${Bil.merke}</p>
 <p>Modell: ${Bil.modell}</p>
 <p>Farge: ${Bil.farge}</p>
 <p>Gruppe: ${Bil.gruppe}</p>
-<p></p>
-<p>Leieinformasjon</p>
+</div>
+
+<div style="width: 300px">
+<h2>Leieinformasjon</h2>
 <p>Utleieavdeling: ${leieinformasjon.utleieavdeling}</p>
 <p>Returavdeling: ${leieinformasjon.returavdeling}</p>
-<p>Fra dato: ${leieinformasjon.fraDato.date} - ${leieinformasjon.fraDato.month} - ${leieinformasjon.fraDato.year}</p>
-<p>Til dato: ${leieinformasjon.tilDato.date} - ${leieinformasjon.tilDato.month} - ${leieinformasjon.tilDato.year}</p>
+<p>Fra dato: ${leieinformasjon.fraDato.date}-${leieinformasjon.fraDato.month}-${leieinformasjon.fraDato.year}</p>
+<p>Til dato: ${leieinformasjon.tilDato.date}-${leieinformasjon.tilDato.month}-${leieinformasjon.tilDato.year}</p>
+</div>
+</div>
+
 <button type="submit">Hent bilen </button>
 </form>
 <form action="SokServlet" method="get">
