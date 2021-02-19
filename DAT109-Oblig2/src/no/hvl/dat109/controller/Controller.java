@@ -68,17 +68,19 @@ public class Controller {
 	 * Metode som oppretter Biler og Utleiekontorer
 	 */
 	public void opprettBilerOgKontorer() {
-
-		Bil b1 = new Bil("ST58393", "BMW", "S3", "Hvit", " A", 750, 124000);
-		Bil b2 = new Bil("EL62401", "Tesla", "Roadster", "Blå", " A", 750, 75000);
-		Bil b3 = new Bil("ST35810", "Audi", "A4", "Hvit", " A", 750, 200000);
-		Bil b4 = new Bil("ST91724", "Opel", "Astra", "Grønn", " A", 750, 170000);
-		Bil b5 = new Bil("ST15834", "Ford", "Focus", "Rød", " A", 750, 54000);
-		Bil b6 = new Bil("ST58396", "BMW", "S3", "Rød", " A", 750, 124000);
-		Bil b7 = new Bil("EL62491", "Tesla", "Roadster", "Sort", " A", 750, 75000);
-		Bil b8 = new Bil("ST33810", "Audi", "A4", "Gul", " A", 750, 200000);
-		Bil b9 = new Bil("ST95624", "Opel", "Astra", "Grønn", " A", 750, 170000);
-		Bil b10 = new Bil("ST18432", "Ford", "Focus", "Rød", " A", 750, 54000);
+		
+		
+		//Gruppe B
+		Bil b1 = new Bil("ST58393", "BMW", "S3", "Hvit", " B", 750, 124000);
+		Bil b2 = new Bil("EL62401", "Tesla", "Roadster", "Blå", " B", 750, 75000);
+		Bil b3 = new Bil("ST35810", "Audi", "A4", "Hvit", " B", 750, 200000);
+		Bil b4 = new Bil("ST91724", "Opel", "Astra", "Grønn", " B", 750, 170000);
+		Bil b5 = new Bil("ST15834", "Ford", "Focus", "Rød", " B", 750, 54000);
+		Bil b6 = new Bil("ST58396", "BMW", "S3", "Rød", " B", 750, 124000);
+		Bil b7 = new Bil("EL62491", "Tesla", "Roadster", "Sort", " B", 750, 75000);
+		Bil b8 = new Bil("ST33810", "Audi", "A4", "Gul", " B", 750, 200000);
+		Bil b9 = new Bil("ST95624", "Opel", "Astra", "Grønn", " B", 750, 170000);
+		Bil b10 = new Bil("ST18432", "Ford", "Focus", "Rød", " B", 750, 54000);
 
 		// Stor bil
 		Bil b11 = new Bil("EL60351", "Nissan", "Evalia", "Hvit", " C", 1100, 14100);
@@ -95,19 +97,25 @@ public class Controller {
 		Bil b20 = new Bil("ST51263", "Mercedes-Benz", "C300e", "Sort", " D", 900, 86000);
 		Bil b21 = new Bil("ST15050", "Audi", "RS6", "Grå", " D", 900, 103000);
 		Bil b22 = new Bil("ST62791", "Volkswagen", "Passat", "Hvit", " D", 900, 242000);
+		
+		//Gruppe A
+		Bil b23 = new Bil("EL32059", "BMW", "i3", "Blå", " A", 650, 75000);
+		Bil b24 = new Bil("ST20592", "Fiat", "500", "Hvit"," A", 650, 23000);
+		Bil b25 = new Bil("ST34017", "Volkswagen", "Polo"," A", "Metallic", 650, 43000);
 
 		List<Bil> l1 = new ArrayList<Bil>(Arrays.asList(b2, b3, b5, b6, b9, b12, b15));
 		List<Bil> l2 = new ArrayList<Bil>(Arrays.asList(b4, b1, b5, b7, b17, b18));
 		List<Bil> l3 = new ArrayList<Bil>(Arrays.asList(b2, b1, b5, b8, b11, b17));
 		List<Bil> l4 = new ArrayList<Bil>(Arrays.asList(b2, b3, b4, b13, b14));
 		List<Bil> l5 = new ArrayList<Bil>(Arrays.asList(b19, b20, b21, b22));
+		List<Bil> l6 = new ArrayList<Bil>(Arrays.asList(b23, b24, b25));
 
 		Utleiekontor utleiekontor1 = new Utleiekontor("Bergen", 55292500, "Kanalveien 48", l1);
 		Utleiekontor utleiekontor2 = new Utleiekontor("Oslo", 22210000, "Jernbanetorget 1", l2);
 		Utleiekontor utleiekontor3 = new Utleiekontor("Stavanger", 51538202, "Olav V s gate 13", l3);
 		Utleiekontor utleiekontor4 = new Utleiekontor("Trondheim", 73503500, "Bratsbergvegen 11-13", l4);
 		Utleiekontor utleiekontor5 = new Utleiekontor("Bergen, Flesland", 55226075, "Flyplassenvegen 555", l5);
-		Utleiekontor utleiekontor6 = new Utleiekontor("Oslo, Gardermoen", 22210000, "Edvard Munchs veg 2060", l4);
+		Utleiekontor utleiekontor6 = new Utleiekontor("Oslo, Gardermoen", 22210000, "Edvard Munchs veg 2060", l6);
 
 		leggTilUtleiekontorer(utleiekontor1);
 		leggTilUtleiekontorer(utleiekontor2);
