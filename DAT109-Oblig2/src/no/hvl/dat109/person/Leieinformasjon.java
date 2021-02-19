@@ -2,13 +2,18 @@ package no.hvl.dat109.person;
 
 import java.util.Date;
 
+/**
+ * 
+ * @author Gruppe 44
+ *
+ */
 public class Leieinformasjon {
-	
+
 	private String utleieavdeling;
 	private String returavdeing;
 	private Date fraDato;
 	private Date tilDato;
-	
+
 	public Leieinformasjon(String utleieavdeling, String returavdeing, Date fraDato, Date tilDato) {
 		this.utleieavdeling = utleieavdeling;
 		this.returavdeing = returavdeing;
@@ -32,7 +37,6 @@ public class Leieinformasjon {
 		this.returavdeing = returavdeing;
 	}
 
-
 	public Date getFraDato() {
 		return fraDato;
 	}
@@ -48,9 +52,5 @@ public class Leieinformasjon {
 	public void setTilDato(Date tilDato) {
 		this.tilDato = tilDato;
 	}
-
-
-	
-	
 
 }

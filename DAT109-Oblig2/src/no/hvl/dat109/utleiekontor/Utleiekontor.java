@@ -7,13 +7,18 @@ import java.util.stream.Collectors;
 
 import no.hvl.dat109.bil.Bil;
 
+/**
+ * 
+ * @author Gruppe 44
+ *
+ */
 public class Utleiekontor {
 
 	private String utleiekontorNavn;
 	private List<Bil> utleieBiler;
 	private int tlfnr;
 	private String adresse;
-	
+
 	/**
 	 * Metode som returner en liste med Biler som er ledig i utleieBiler
 	 * 
@@ -24,29 +29,23 @@ public class Utleiekontor {
 	 * 
 	 * 
 	 */
-
 	public List<Bil> listeOverLedigeBiler(Date fra, Date til) {
-		
-	
 
-	   // List<Bil> returListe = utleieBiler.stream().filter(b ->  b.getResFra().before(fra)  ).collect(Collectors.toList());
-	    
 		List<Bil> returListe = new ArrayList<Bil>();
-		
-		
-		for(Bil b : utleieBiler) {
-			
-			if((b.getResFra() == null && b.getResTil() == null ) || ( b.getResFra().before(fra) &&  b.getResTil().after(til) )
-					|| ( b.getResFra().before(fra) &&  b.getResTil().before(til) )	|| ( b.getResFra().after(fra) &&  b.getResTil().after(til) )	 ) {
+
+		for (Bil b : utleieBiler) {
+
+			if ((b.getResFra() == null && b.getResTil() == null)
+					|| (b.getResFra().before(fra) && b.getResTil().after(til))
+					|| (b.getResFra().before(fra) && b.getResTil().before(til))
+					|| (b.getResFra().after(fra) && b.getResTil().after(til))) {
 				returListe.add(b);
 			}
-			
-			
+
 		}
-		
-		
-        return returListe;
-		
+
+		return returListe;
+
 	}
 
 	/**
@@ -64,7 +63,6 @@ public class Utleiekontor {
 
 	}
 
-	
 	public Utleiekontor() {
 	};
 

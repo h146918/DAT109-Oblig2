@@ -3,6 +3,11 @@ package no.hvl.dat109.kunder;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author Gruppe 44
+ *
+ */
 public class KundeServer {
 
 	static List<Kundeinformasjon> server = new ArrayList<Kundeinformasjon>();
@@ -11,6 +16,11 @@ public class KundeServer {
 		server.add(kundeinformasjon);
 	}
 
+	/**
+	 * Metode for å fjerne en kunde
+	 * 
+	 * @param kundeinformasjon
+	 */
 	public static void fjernKunde(Kundeinformasjon kundeinformasjon) {
 
 		for (Kundeinformasjon kunde : server) {
@@ -21,21 +31,12 @@ public class KundeServer {
 		}
 	}
 
-//	public static Kundeinformasjon finnKunde(String fornavn, String etternavn) {
-//
-//		Kundeinformasjon kundeinformasjon = null;
-//
-//		for (Kundeinformasjon kunde : server) {
-//			if (kunde.getPerson().getFornavn().equals(fornavn) && kunde.getPerson().getEtternavn().equals(etternavn)) {
-//				kundeinformasjon = kunde;
-//			}
-//
-//		}
-//
-//		return kundeinformasjon;
-//		
-//	}
-	
+	/**
+	 * Metode for å finne en kunde
+	 * 
+	 * @param regnr
+	 * @return Kundeinformasjon
+	 */
 	public static Kundeinformasjon finnKunde(String regnr) {
 
 		Kundeinformasjon kundeinformasjon = null;
@@ -49,15 +50,18 @@ public class KundeServer {
 		}
 
 		return kundeinformasjon;
-		
+
 	}
-	
+
+	/**
+	 * TESTMetode for å skrive ut hvilken bil en kunde har leiet (kosoll)
+	 */
 	public static void SkrivUtServer() {
-		
-		for(Kundeinformasjon k : server) {
+
+		for (Kundeinformasjon k : server) {
 			System.out.println(k.getPerson().toString() + " " + k.getBil().toString());
 		}
-		
+
 	}
 
 }

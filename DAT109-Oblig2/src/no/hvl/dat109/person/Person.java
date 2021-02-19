@@ -1,5 +1,10 @@
 package no.hvl.dat109.person;
 
+/**
+ * 
+ * @author Gruppe 44
+ *
+ */
 public class Person {
 
 	private String fornavn;

@@ -7,10 +7,22 @@ import java.util.List;
 import no.hvl.dat109.bil.Bil;
 import no.hvl.dat109.utleiekontor.Utleiekontor;
 
+/**
+ * 
+ * @author Gruppe 44
+ *
+ */
 public class Controller {
 
 	List<Utleiekontor> utleiekontorer = new ArrayList<Utleiekontor>();
 
+	/**
+	 * Metode som finner bil som har et gitt registreringsnummer
+	 * 
+	 * @param regnr
+	 * @param liste
+	 * @return Bil
+	 */
 	public Bil finnBilMedReg(String regnr, List<Bil> liste) {
 
 		Bil bil = new Bil();
@@ -24,10 +36,20 @@ public class Controller {
 		return bil;
 	}
 
+	/**
+	 * 
+	 * @param utleiekontor
+	 */
 	public void leggTilUtleiekontorer(Utleiekontor utleiekontor) {
 		utleiekontorer.add(utleiekontor);
 	}
 
+	/**
+	 * Metode som finner utleiekontor
+	 * 
+	 * @param utleiekontorString
+	 * @return Utleiekontor
+	 */
 	public Utleiekontor finnUtleieKontor(String utleiekontorString) {
 
 		Utleiekontor utleiekontor = new Utleiekontor();
@@ -42,6 +64,9 @@ public class Controller {
 
 	}
 
+	/**
+	 * Metode som oppretter Biler og Utleiekontorer
+	 */
 	public void opprettBilerOgKontorer() {
 
 		Bil b1 = new Bil("ST58393", "BMW", "S3", "Hvit", "Gruppe A", 750, 124000);
@@ -54,16 +79,16 @@ public class Controller {
 		Bil b8 = new Bil("ST33810", "Audi", "A4", "Gul", "Gruppe A", 750, 200000);
 		Bil b9 = new Bil("ST95624", "Opel", "Astra", "Grønn", "Gruppe A", 750, 170000);
 		Bil b10 = new Bil("ST18432", "Ford", "Focus", "Rød", "Gruppe A", 750, 54000);
-		
-		//Stor bil
+
+		// Stor bil
 		Bil b11 = new Bil("EL60351", "Nissan", "Evalia", "Hvit", "Gruppe C", 1100, 14100);
 		Bil b12 = new Bil("ST51485", "Volkswagen", "Caddy", "Blå", "Gruppe C", 1100, 98000);
 		Bil b13 = new Bil("ST71942", "Fiat", "Talento", "Sort", "Gruppe C", 1100, 73000);
 		Bil b14 = new Bil("ST90248", "Ford", "Transit", "Metallic", "Gruppe C", 1100, 140000);
 		Bil b15 = new Bil("ST13522", "Ford", "Caravelle", "Grønn", "Gruppe C", 1100, 151000);
 		Bil b16 = new Bil("ST94512", "Citroen", "Berlingo", "Rød", "Gruppe C", 1100, 173000);
-		
-		//Stasjonsvogn
+
+		// Stasjonsvogn
 		Bil b17 = new Bil("ST51284", "Volvo", "V90", "Sort", "Gruppe D", 900, 54000);
 		Bil b18 = new Bil("ST71252", "Skoda", "Oktavia", "Metallic", "Gruppe D", 900, 42000);
 		Bil b19 = new Bil("ST41270", "Mercedes-Benz", "C200 T", "Blå", "Gruppe D", 900, 96000);
@@ -93,27 +118,43 @@ public class Controller {
 
 	}
 
+	/**
+	 * Metode som konverterer en String til dato
+	 * 
+	 * @param datoString
+	 * @return Date
+	 */
 	@SuppressWarnings("deprecation")
 	public Date stringTilDato(String datoString) {
 
 		System.out.println(datoString);
-		
+
 		String[] dato = datoString.split("-");
 
 		Date date = new Date();
 		date.setYear(Integer.parseInt(dato[0]));
 		date.setMonth(Integer.parseInt(dato[1]));
 		date.setDate(Integer.parseInt(dato[2]));
-		
+
 		System.out.println(dato[0]);
 		System.out.println(dato[1]);
 		System.out.println(dato[2]);
-		
+
 		System.out.println("mnd: " + date.getMonth());
-		
+
 		return date;
 	}
 
+	/**
+	 * Metode for å regne ut utleieprisen
+	 * 
+	 * @param hentet
+	 * @param planlagtLevering
+	 * @param faktiskLevering
+	 * @param reservertAvdeling
+	 * @param faktiskAvdeling
+	 * @return Int
+	 */
 	@SuppressWarnings("deprecation")
 	public int regnUtPris(Date hentet, Date planlagtLevering, Date faktiskLevering, String reservertAvdeling,
 			String faktiskAvdeling) {
@@ -128,34 +169,17 @@ public class Controller {
 		System.out.println("Dager: " + dager);
 		System.out.println("Mnd: " + mnd);
 		System.out.println("År: " + aar);
-		
+
 		int total = (dager + mnd + aar) * fastpris;
-		
+
 		System.out.println("Total: " + total);
 
 		if (!reservertAvdeling.equals(faktiskAvdeling)) {
 			total += gebyr;
 			System.out.println("Total m gebyr " + gebyr);
 		}
-		
-		
 
 		return total;
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

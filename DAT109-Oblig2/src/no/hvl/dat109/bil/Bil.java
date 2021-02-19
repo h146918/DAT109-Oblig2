@@ -21,12 +21,11 @@ public class Bil {
 	private Date resFra = null;
 	private Date resTil = null;
 	private int km;
-	
 
 	public Bil() {
 	};
 
-	public Bil(String regnr, String merke, String modell, String farge, String gruppe, int pris,  int km) {
+	public Bil(String regnr, String merke, String modell, String farge, String gruppe, int pris, int km) {
 		this.regnr = regnr;
 		this.merke = merke;
 		this.modell = modell;
@@ -75,7 +74,6 @@ public class Bil {
 	public void setGruppe(String gruppe) {
 		this.gruppe = gruppe;
 	}
-	
 
 	public int getKm() {
 		return km;
@@ -114,8 +112,5 @@ public class Bil {
 		return "Bil [regnr=" + regnr + ", merke=" + merke + ", modell=" + modell + ", farge=" + farge + ", gruppe="
 				+ gruppe + ", pris=" + pris + ", resFra=" + resFra + ", resTil=" + resTil + ", km=" + km + "]";
 	}
-
-	
-	
 
 }
