@@ -34,7 +34,7 @@ public class ReserverServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		Controller controller = new Controller();
-		HttpSession sesjon = request.getSession();
+		HttpSession sesjon = request.getSession(true);
 
 		String regnr = request.getParameter("leidbil");
 		String fornavn = request.getParameter("fornavn");
@@ -58,14 +58,14 @@ public class ReserverServlet extends HttpServlet {
 		
 		
 		Kundeinformasjon kunde = new Kundeinformasjon(person, bil, info);
-		
-		System.out.println("Res fra : " + bil.getResFra());
-		System.out.println("Res til : " + bil.getResTil());
 
 		sesjon.setAttribute("Bil", bil);
 		sesjon.setAttribute("Person", person);
 		
 		KundeServer.leggTilKunde(kunde);
+		
+		System.out.println("Regner for bilen din er: " + bil.getRegnr());
+		System.out.println("Km: " + bil.getKm());
 		
 		response.sendRedirect("BekreftelseServet");
 

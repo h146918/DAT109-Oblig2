@@ -44,7 +44,6 @@ public class KundeServer {
 		for (Kundeinformasjon kunde : server) {
 			if (kunde.getBil().getRegnr().equals(regnr)) {
 				kundeinformasjon = kunde;
-				System.out.println("Funnet!");
 			}
 
 		}
@@ -56,12 +55,12 @@ public class KundeServer {
 	/**
 	 * TESTMetode for å skrive ut hvilken bil en kunde har leiet (kosoll)
 	 */
-	public static void SkrivUtServer() {
-
-		for (Kundeinformasjon k : server) {
-			System.out.println(k.getPerson().toString() + " " + k.getBil().toString());
-		}
-
-	}
+//	public static void SkrivUtServer() {
+//
+//		for (Kundeinformasjon k : server) {
+//			System.out.println(k.getPerson().toString() + " " + k.getBil().toString());
+//		}
+//
+//	}
 
 }

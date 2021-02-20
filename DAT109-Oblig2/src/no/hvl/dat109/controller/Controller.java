@@ -69,6 +69,14 @@ public class Controller {
 	 */
 	public void opprettBilerOgKontorer() {
 		
+		//Gruppe A
+		Bil b23 = new Bil("EL32059", "BMW", "i3", "Blå", " A", 650, 75000);
+		Bil b24 = new Bil("ST20592", "Fiat", "500", "Hvit"," A", 650, 23000);
+		Bil b25 = new Bil("ST34017", "Volkswagen", "Polo"," A", "Metallic", 650, 43000);
+		
+		Bil b26 = new Bil("ST37619", "Ford", "Fiesta"," A", "Rød", 650, 43000);
+		Bil b27 = new Bil("ST74416", "Mini", "Cooper"," A", "Svart", 650, 43000);
+		Bil b28 = new Bil("ST61925", "Hyundai", "i20"," A", "Grønn", 650, 43000);
 		
 		//Gruppe B
 		Bil b1 = new Bil("ST58393", "BMW", "S3", "Hvit", " B", 750, 124000);
@@ -80,7 +88,9 @@ public class Controller {
 		Bil b7 = new Bil("EL62491", "Tesla", "Roadster", "Sort", " B", 750, 75000);
 		Bil b8 = new Bil("ST33810", "Audi", "A4", "Gul", " B", 750, 200000);
 		Bil b9 = new Bil("ST95624", "Opel", "Astra", "Grønn", " B", 750, 170000);
-		Bil b10 = new Bil("ST18432", "Ford", "Focus", "Rød", " B", 750, 54000);
+		Bil b10 = new Bil("ST18432", "Ford", "Focus", "Blå", " B", 750, 54000);
+		Bil b29 = new Bil("ST73546", "Ford", "Focus", "Hvit", " B", 750, 54000);
+		Bil b30 = new Bil("ST31329", "Opel", "Astra", "Grønn", " B", 750, 170000);
 
 		// Stor bil
 		Bil b11 = new Bil("EL60351", "Nissan", "Evalia", "Hvit", " C", 1100, 14100);
@@ -98,17 +108,14 @@ public class Controller {
 		Bil b21 = new Bil("ST15050", "Audi", "RS6", "Grå", " D", 900, 103000);
 		Bil b22 = new Bil("ST62791", "Volkswagen", "Passat", "Hvit", " D", 900, 242000);
 		
-		//Gruppe A
-		Bil b23 = new Bil("EL32059", "BMW", "i3", "Blå", " A", 650, 75000);
-		Bil b24 = new Bil("ST20592", "Fiat", "500", "Hvit"," A", 650, 23000);
-		Bil b25 = new Bil("ST34017", "Volkswagen", "Polo"," A", "Metallic", 650, 43000);
+	
 
-		List<Bil> l1 = new ArrayList<Bil>(Arrays.asList(b2, b3, b5, b6, b9, b12, b15));
-		List<Bil> l2 = new ArrayList<Bil>(Arrays.asList(b4, b1, b5, b7, b17, b18));
-		List<Bil> l3 = new ArrayList<Bil>(Arrays.asList(b2, b1, b5, b8, b11, b17));
-		List<Bil> l4 = new ArrayList<Bil>(Arrays.asList(b2, b3, b4, b13, b14));
-		List<Bil> l5 = new ArrayList<Bil>(Arrays.asList(b19, b20, b21, b22));
-		List<Bil> l6 = new ArrayList<Bil>(Arrays.asList(b23, b24, b25));
+		List<Bil> l1 = new ArrayList<Bil>(Arrays.asList(b23, b1, b2, b11, b17));
+		List<Bil> l2 = new ArrayList<Bil>(Arrays.asList(b24, b3, b4, b12 , b18));
+		List<Bil> l3 = new ArrayList<Bil>(Arrays.asList(b25, b5, b6, b5, b13, b19));
+		List<Bil> l4 = new ArrayList<Bil>(Arrays.asList(b26, b7, b8, b4, b14, b20));
+		List<Bil> l5 = new ArrayList<Bil>(Arrays.asList(b27, b9, b10, b15, b21));
+		List<Bil> l6 = new ArrayList<Bil>(Arrays.asList(b28, b29, b30, b16, b22 ));
 
 		Utleiekontor utleiekontor1 = new Utleiekontor("Bergen", 55292500, "Kanalveien 48", l1);
 		Utleiekontor utleiekontor2 = new Utleiekontor("Oslo", 22210000, "Jernbanetorget 1", l2);
@@ -135,20 +142,12 @@ public class Controller {
 	@SuppressWarnings("deprecation")
 	public Date stringTilDato(String datoString) {
 
-		System.out.println(datoString);
-
 		String[] dato = datoString.split("-");
 
 		Date date = new Date();
 		date.setYear(Integer.parseInt(dato[0]));
 		date.setMonth(Integer.parseInt(dato[1]));
 		date.setDate(Integer.parseInt(dato[2]));
-
-		System.out.println(dato[0]);
-		System.out.println(dato[1]);
-		System.out.println(dato[2]);
-
-		System.out.println("mnd: " + date.getMonth());
 
 		return date;
 	}
@@ -176,8 +175,6 @@ public class Controller {
 
 
 		int total = (dager + mnd + aar) * fastpris;
-
-		System.out.println("Total: " + total);
 
 		if (!reservertAvdeling.equals(faktiskAvdeling)) {
 			total += gebyr;

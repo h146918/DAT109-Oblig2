@@ -31,7 +31,9 @@
 			<div>Returavdeling
 		<select name="returavdeling"> 
 			<option value="Bergen" selected="selected">Bergen</option>
+			<option value="Bergen, Flesland">Bergen, Flesland</option>
 			<option value="Oslo">Oslo</option>
+			<option value="Oslo, Gardermoen">Oslo, Gardemoen</option>
 			<option value="Stavanger">Stavanger</option>
 			<option value="Trondheim">Trondheim</option>
 		</select>
