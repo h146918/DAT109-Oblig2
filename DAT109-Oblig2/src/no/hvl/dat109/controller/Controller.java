@@ -8,6 +8,7 @@ import no.hvl.dat109.bil.Bil;
 import no.hvl.dat109.utleiekontor.Utleiekontor;
 
 /**
+ * Controller klasse
  * 
  * @author Gruppe 44
  *

@@ -24,12 +24,8 @@ public class Utleiekontor {
 	/**
 	 * Metode som returner en liste med Biler som er ledig i utleieBiler
 	 * 
-	 * 
 	 * @return Metode som returnerer en liste med biler som er ledige fra
 	 *         utleiekontoret
-	 * 
-	 * 
-	 * 
 	 */
 	public List<Bil> listeOverLedigeBiler(Date fra, Date til) {
 
