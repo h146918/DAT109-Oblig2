@@ -37,6 +37,7 @@ public class Controller {
 	}
 
 	/**
+	 * Metode som legger til et utleekontor
 	 * 
 	 * @param utleiekontor
 	 */
@@ -48,7 +49,7 @@ public class Controller {
 	 * Metode som finner utleiekontor
 	 * 
 	 * @param utleiekontorString
-	 * @return Utleiekontor
+	 * @return utleiekontor
 	 */
 	public Utleiekontor finnUtleieKontor(String utleiekontorString) {
 
@@ -66,6 +67,7 @@ public class Controller {
 
 	/**
 	 * Metode som oppretter Biler og Utleiekontorer
+	 * 
 	 */
 	public void opprettBilerOgKontorer() {
 		

@@ -9,6 +9,8 @@ import no.hvl.dat109.bil.Bil;
 
 /**
  * 
+ * Klasse som som administrerer informasjon om utleiekontor
+ * 
  * @author Gruppe 44
  *
  */

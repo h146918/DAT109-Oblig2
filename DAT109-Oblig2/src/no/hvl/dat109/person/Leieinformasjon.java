@@ -4,6 +4,8 @@ import java.util.Date;
 
 /**
  * 
+ * Klasse som håndterer leieinformasjon 
+ * 
  * @author Gruppe 44
  *
  */

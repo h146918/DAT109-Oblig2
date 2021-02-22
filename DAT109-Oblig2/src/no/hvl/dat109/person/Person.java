@@ -2,6 +2,8 @@ package no.hvl.dat109.person;
 
 /**
  * 
+ * Klasse som håndterer informasjon om person (som leier)
+ * 
  * @author Gruppe 44
  *
  */
